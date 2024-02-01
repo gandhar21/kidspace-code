@@ -1,15 +1,286 @@
+/* 
+ *
+ * ANCHOR Fonts
+------------------------------------------------*/
 @font-face {
-    font-family: "Atlantic Medium";
-    src: url("../../fonts/HWAtlantic-Medium.otf");
+    font-family: 'Archer';
+    src: url('/../fonts/Archer/HCo_Archer_Complete_Web/hco_fonts/woff2/Archer-Black-Pro_Web.woff2') format('woff2');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Archer';
+    src: url('/../fonts/Archer/HCo_Archer_Complete_Web/hco_fonts/woff2/Archer-Book-Pro_Web.woff2') format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Newsreader';
+    src: url('/../fonts/Newsreader/Newsreader-VariableFont_opsz,wght.ttf') format('woff2');
 }
 
-@font-face {
-    font-family: "Atlantic Semibold";
-    src: url("../../fonts/HWAtlantic-Semibold.otf");
+/* 
+ *
+ * ANCHOR Variables  
+------------------------------------------------*/
+:root {
+
+	/* colors */
+	--teal: #09B4A4;
+	--sky: #03A2D6;
+	--grape: #733F8B;
+	--rose: #D4227C;
+	--watermelon: #F53F4E;
+	--tangerine: #FB7900;
+	--lemon: #FFAB00;
+
+	--teal35: #A9E5DF;
+	--sky35: #A7DFF1;
+	--grape35: #CEBCD7;
+	--rose35: #F0B2D1;
+	--watermelon35: #FCBCC1;
+	--tangerine35: #FED0A6;
+	--lemon35: #FFE2A6;
 }
 
+/* 
+ *
+ * ANCHOR Color Context  
+------------------------------------------------*/
+.color-context--teal {
+	--current-color: var(--teal);
+}
+.color-context--sky {
+	--current-color: var(--sky);
+}
+.color-context--grape {
+	--current-color: var(--grape);
+}
+.color-context--rose {
+	--current-color: var(--rose);
+}
+.color-context--watermelon {
+	--current-color: var(--watermelon);
+}
+.color-context--tangerine {
+	--current-color: var(--tangerine);
+}
+.color-context--lemon {
+	--current-color: var(--lemon);
+}
+
+.color-context--teal35 {
+	--current-color: var(--teal35);
+}
+.color-context--sky35 {
+	--current-color: var(--sky35);
+}
+.color-context--grape35 {
+	--current-color: var(--grape35);
+}
+.color-context--rose35 {
+	--current-color: var(--rose35);
+}
+.color-context--watermelon35 {
+	--current-color: var(--watermelon35);
+}
+.color-context--tangerine35 {
+	--current-color: var(--tangerine35);
+}
+.color-context--lemon35 {
+	--current-color: var(--lemon35);
+}
+
+
+/* 
+ *
+ * ANCHOR Global
+------------------------------------------------*/
 body {
  background-color: white;
+}
+img {
+	display: block;
+}
+
+/* 
+ *
+ * ANCHOR Section Hero
+------------------------------------------------*/
+.section-hero {
+	padding-bottom: 5em;
+	background-color: var(--current-color);
+	&__running-head {
+		text-align: center;
+		margin-bottom: 5em;
+		h3 {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 800;
+			font-size: 10em;
+			color: white;
+		}
+		p {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 400;
+			margin-top: -3em;
+			color: white;
+		}
+	}
+	&__image {
+		margin: 1em;
+		margin-bottom: 2.5em;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__title {
+		text-align: center;
+		margin: 0 3em;
+		margin-bottom: 5em;
+		h2 {
+			font-family: 'Archer';
+			font-weight: 800;
+			font-size: 3em;
+			line-height: 100%;
+			color: white;
+		}
+	}
+	&__button {
+		font-family: 'Archer';
+		font-weight: 300;
+		font-size: 1.2em;
+		color: white;
+		background-color: #FB7900;
+		border: solid white 1px;
+		border-radius: 10px;
+		padding: 0.9em 2em;
+		margin-bottom: 1em;
+		box-shadow: 0px 1.92px 1.92px 0px rgba(0, 0, 0, 0.25);
+	}
+}
+
+/* 
+ *
+ * ANCHOR Section Content
+------------------------------------------------*/
+.section-content {
+	&__slide {
+		padding: 5em 2em;
+		background-color: var(--current-color);
+		&-text {
+			font-family: 'Newsreader';
+			font-weight: 400;
+			font-size: 1.1em;
+			line-height: 140%;
+		}
+		&-quote {
+			font-family: 'Archer';
+			font-weight: 400;
+			font-size: 3em;
+			color: white;
+			&--small {
+				font-size: 1.5em;
+				margin-bottom: 0.5em;
+			}
+		}
+		&-caption {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 200;
+			font-size: 0.8em;
+			margin-top: 2em;
+			color: white;
+		}
+		&-subhead {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 200;
+			font-size: 0.9em;
+			margin-bottom: 0.8em;
+			color: white;
+		}
+		&-subsection-head {
+			font-family: 'Archer';
+			font-weight: 400;
+			font-size: 1.2em;
+			color: white;
+			&--large {
+				font-size: 2.2em;
+				margin-bottom: 1em;
+			}
+		}
+		&-head {
+			font-family: 'Newsreader';
+			font-weight: 800;
+			font-size: 4em;
+			overflow-wrap: break-word;
+			hyphens: auto;
+			margin-top: -0.4em;
+			color: white;
+			&--small {
+				font-size: 2em;
+			}
+		}
+		&-stats {
+			text-align: center;
+			margin-bottom: 8em;
+			&-number {
+				font-family: 'Newsreader';
+				font-weight: 800;
+				font-size: clamp(1em, 5em, 18vw);
+				&--trillion {
+					font-size: 22vw;
+				}
+			}
+			&-caption {
+				font-family: 'Newsreader';
+				font-weight: 400;
+				font-size: 0.9em;
+				margin-bottom: 1em;
+				&--trillion {
+					font-size: 2em !important;
+				}
+				&--finances {
+					font-family: 'Poppins', sans-serif;
+					font-weight: 200;
+					font-size: 1em;
+				}
+			}
+			&--finances {
+				margin-top: 7em;
+				margin-bottom: 0 !important;
+			}
+		}
+	}
+}
+
+/* 
+ *
+ * ANCHOR Capital Improvements
+------------------------------------------------*/
+.capital-improvements {
+	&__menu {
+		text-align: center;
+		button {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 400;
+			font-size: 1.2em;
+			text-transform: uppercase;
+			margin: 3em 0;
+		}
+		ul {
+			button {
+				font-family: 'Newsreader';
+				font-weight: 400;
+				font-size: 1.2em;
+				background-color: rgb(255, 255, 255);
+				border-radius: 10px;
+				padding: 2em;
+				text-decoration: none;
+				text-transform: capitalize;
+			}
+		}
+		&-center {
+
+		}
+	}
 }
 
 
