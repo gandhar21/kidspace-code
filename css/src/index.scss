@@ -13,6 +13,11 @@
     font-weight: 400;
 }
 @font-face {
+    font-family: 'Archer';
+    src: url('/../fonts/Archer/HCo_Archer_Complete_Web/hco_fonts/woff2/Archer-Semibold-Pro_Web.woff2') format('woff2');
+    font-weight: 500;
+}
+@font-face {
     font-family: 'Newsreader';
     src: url('/../fonts/Newsreader/Newsreader-VariableFont_opsz,wght.ttf') format('woff2');
 }
@@ -95,7 +100,7 @@
  * ANCHOR Global
 ------------------------------------------------*/
 body {
- background-color: white;
+ 	background-color: white;
 }
 img {
 	display: block;
@@ -164,13 +169,19 @@ img {
 ------------------------------------------------*/
 .section-content {
 	&__slide {
-		padding: 5em 2em;
+		padding: 4em 2em;
 		background-color: var(--current-color);
 		&-text {
 			font-family: 'Newsreader';
 			font-weight: 400;
 			font-size: 1.1em;
 			line-height: 140%;
+			&--white {
+				color: white;
+			}
+			&--watermelon {
+				color: #F53F4E;
+			}
 		}
 		&-quote {
 			font-family: 'Archer';
@@ -195,6 +206,13 @@ img {
 			font-size: 0.9em;
 			margin-bottom: 0.8em;
 			color: white;
+			&--graph {
+				font-family: 'Archer';
+				font-weight: 500;
+				font-style: italic;
+				font-size: 1.2em;
+				color: var(--grape);
+			}
 		}
 		&-subsection-head {
 			font-family: 'Archer';
@@ -228,6 +246,15 @@ img {
 				&--trillion {
 					font-size: 22vw;
 				}
+				&--white {
+					color: white;
+				}
+				&--grape {
+					color: var(--grape);
+				}
+				&--grape35 {
+					color: #9771A9;
+				}
 			}
 			&-caption {
 				font-family: 'Newsreader';
@@ -242,6 +269,14 @@ img {
 					font-weight: 200;
 					font-size: 1em;
 				}
+				&--white {
+					color: white;
+				}
+				&--poppins {
+					font-family: 'Poppins', sans-serif;
+					font-weight: 600;
+					font-size: 0.8em;
+				}
 			}
 			&--finances {
 				margin-top: 7em;
@@ -249,19 +284,24 @@ img {
 			}
 		}
 	}
+	// &__image {
+	// 	&--scroller {
+	// 		display: flex;
+	// 	}
+	// }
 }
 
 /* 
  *
  * ANCHOR Capital Improvements
 ------------------------------------------------*/
-.capital-improvements {
+.our-partners {
 	&__menu {
 		text-align: center;
 		button {
 			font-family: 'Poppins', sans-serif;
-			font-weight: 400;
-			font-size: 1.2em;
+			font-weight: 300;
+			font-size: 1em;
 			text-transform: uppercase;
 			margin: 3em 0;
 		}
@@ -275,15 +315,444 @@ img {
 				padding: 2em;
 				text-decoration: none;
 				text-transform: capitalize;
+				a {
+					text-decoration: none;
+				}
 			}
 		}
 		&-center {
-
+			width: 40vw;
+			margin-left: auto;
+			margin-right: auto;
+			img {
+				width: 100%;
+				height: auto;
+				margin-bottom: 1em;
+			}
+			p {
+				font-family: 'Archer';
+				font-weight: 500;
+				font-style: italic;
+				font-size: 1em;
+				color: var(--watermelon);
+			}
 		}
 	}
 }
 
 
 @media screen and (min-width: 800px) {
-
+	.section-hero {
+		height: 100vh;
+		&__running-head {
+			position: absolute;
+			z-index: 2;
+			display: flex;
+			width: fit-content;
+			left: 0; 
+			right: 0; 
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 5em;
+			align-items: center;
+			h3 {
+				font-size: 1.2em;
+				margin-right: 0.2em;
+			}
+			p {
+				margin-top: 0em;
+			}
+		}
+		&__title {
+			position: absolute;
+			z-index: 2;
+			height: 100vh;
+			width: 100vw;
+			display: grid;
+			place-content: center;
+			margin: 0;
+		}
+		&__image {
+			position: absolute;
+			z-index: 1;
+			height: 90vh;
+			width: 94vw;
+			margin: 5vh 2vw;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	.section-content {
+		&__slide {
+			height: 100vh;
+			width: 50%;
+			display: grid;
+			grid-auto-flow: row;
+			place-content: center;
+			&-text {
+				max-width: 45ch;
+				font-size: 1.3em;
+				padding: 0em 2em;
+			}
+			&-quote {
+				font-size: 3.5em;
+				padding: 0em 2em;
+				&--small {
+					font-size: 2em;
+				}
+			}
+			&-caption {
+				font-size: 0.9em;
+				margin-left: 45%;
+				&--capital-improvements {
+					margin-left: 0;
+					padding: 0em 2.5em;
+				}
+			}
+			&-subhead {
+				padding: 2em 5.5em;
+				margin-top: -40vh;
+			}
+			&-subsection-head {
+				font-size: 1.7em;
+				color: white;
+				padding: 0;
+				&--large {
+					font-size: 3em;
+					margin-bottom: 1em;
+					padding: 0em 0.8em;
+				}
+				&--impact {
+					padding: 0em 3.5em;
+				}
+			}
+			&-head {
+				font-size: 5.5em;
+				padding: 0 2em;
+				&--small {
+					font-size: 2.5em;
+					margin-top: -25vh;
+				}
+			}
+			&-stats {
+				&-caption {
+					max-width: 30ch;
+					line-height: 140%;
+					font-size: 1.1em;
+					&--finances {
+						width: 100%;
+						text-align: center;
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+				&-number {
+					&--trillion {
+						font-size: 10vw;
+					}
+				}
+			}
+		}
+		&__image {
+			height: 100vh;
+			width: 50%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	.introduction {
+		&__1 {
+			margin-left: 50%;
+		}
+		&__3 {
+			margin-left: 50%;
+		}
+		&__5 {
+			margin-left: 50%;
+		}
+		&__6 {
+			width: 100% !important;
+		}
+		&__7 {
+			margin-top: -80vh;
+			height: 80vh;
+			background-color: none;
+		}
+	}
+	.impact {
+		&__1 {
+			width: 25% !important;
+			p {
+				margin-top: -40vh;
+			}
+		}
+		&__2 {
+			width: 75% !important;
+			margin-left: 25%;
+			position: relative;
+			&--1 {
+				position: absolute;
+				top: 15vh;
+				left: 15vw;
+			}
+			&--2 {
+				position: absolute;
+				top: 37vh;
+				left: 40vw;
+			}
+			&--3 {
+				position: absolute;
+				top: 65vh;
+				left: 11vw;
+			}
+		}
+		&__3 {
+			width: 75% !important;
+			margin-left: 25%;
+			position: relative;
+			&--1 {
+				position: absolute;
+				top: 10vh;
+				left: 35vw;
+			}
+			&--2 {
+				position: absolute;
+				top: 45vh;
+				left: 15vw;
+			}
+		}
+		&__4 {
+			width: 25% !important;
+			p {
+				margin-top: -40vh;
+			}
+		}
+		&__5 {
+			width: 75% !important;
+			margin-left: 25%;
+			position: relative;
+			&--1 {
+				position: absolute;
+				top: 15vh;
+				left: 35vw;
+			}
+			&--2 {
+				position: absolute;
+				top: 37vh;
+				left: 10vw;
+			}
+			&--3 {
+				position: absolute;
+				top: 65vh;
+				left: 40vw;
+			}
+		}
+		&__6 {
+			width: 75% !important;
+			margin-left: 25%;
+			position: relative;
+			&--1 {
+				position: absolute;
+				top: 15vh;
+				left: 15vw;
+			}
+			&--2 {
+				position: absolute;
+				top: 37vh;
+				left: 40vw;
+			}
+			&--3 {
+				position: absolute;
+				top: 65vh;
+				left: 11vw;
+			}
+		}
+		&__7 {
+			width: 75% !important;
+			margin-left: 25%;
+			position: relative;
+		}
+		&__8 {
+			margin-left: 50%;
+		}
+		&__10 {
+			margin-left: 50%;
+		}
+		&__13 {
+			p {
+				padding: 0 0em !important;
+			}
+		}
+		&__14 {
+			margin-left: 50%;
+			img {
+				width: 100%;
+				height: 50%;
+				object-fit: cover;
+			}
+		}
+		&__16 {
+			margin-left: 50%;
+		}
+	}
+	.finances {
+		&__3 {
+			width: 25% !important;
+		}
+		&__4 {
+			width: 75%;
+			margin-left: 25%;
+		}
+		&__5 {
+			width: 25% !important;
+			margin-left: 75%;
+		}
+		&__6 {
+			width: 75%;
+		}
+		&__7 {
+			width: 25% !important;
+		}
+		&__8 {
+			width: 75%;
+			margin-left: 25%;
+		}
+	}
+	.capital-improvements {
+		&__1 {
+			margin-left: 50%;
+		}
+		&__2 {
+			&--2 {
+				width: 100%;
+				height: 50% !important;
+				object-fit: cover !important;
+			}
+			&--3 {
+				width: 100%;
+				height: 50% !important;
+				object-fit: cover !important;
+			}
+		}
+		&__3 {
+			&--2 {
+				width: 100%;
+				height: 50% !important;
+				object-fit: cover !important;
+			}
+			&--3 {
+				width: 100%;
+				height: 50% !important;
+				object-fit: cover !important;
+			}
+		}
+		&__4 {
+			margin-left: 50%;
+			&--2 {
+				width: 100%;
+				height: 50% !important;
+				object-fit: cover !important;
+			}
+			&--3 {
+				width: 100%;
+				height: 50% !important;
+				object-fit: cover !important;
+			}
+		}
+		&__5 {
+			margin-left: 50%;
+		}
+	}
+	.our-partners {
+		&__1 {
+			margin-left: 50%;
+		}
+		&__3 {
+			width: 35% !important;
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		&__5 {
+			width: 65% !important;
+			margin-left: 35%;
+			display: flex;
+			&--1 {
+				width: 60%;
+				height: 90%;
+				object-fit: cover;
+			}
+			&--2 {
+				width: 40%;
+				height: 40%;
+				object-fit: cover;
+			}
+		}
+		&__6 {
+			margin-left: 50%;
+		}
+		&__8 {
+			width: 100% !important;
+		}
+		&__menu {
+			position: relative;
+			button {
+				text-align: center;
+			}
+			ul {
+				display: none;
+			}
+			&-center {
+				width: 10vw;
+				height: 10vw;
+				position: absolute;
+				top: 35vh;
+				left: 45vw;
+			}
+			&-government-partners {
+				width: 10vw;
+				position: absolute;
+				top: 20vh;
+				left: 10vw;
+			}
+			&-educators {
+				width: 10vw;
+				position: absolute;
+				top: 10vh;
+				left: 45vw;
+			}
+			&-foster-families {
+				width: 10vw;
+				position: absolute;
+				top: 20vh;
+				left: 75vw;
+			}
+			&-arts-community {
+				width: 10vw;
+				position: absolute;
+				top: 55vh;
+				left: 10vw;
+			}
+			&-wildlife {
+				width: 10vw;
+				position: absolute;
+				top: 70vh;
+				left: 45vw;
+			}
+			&-health {
+				width: 10vw;
+				position: absolute;
+				top: 55vh;
+				left: 75vw;
+			}
+		}
+	}
 }
