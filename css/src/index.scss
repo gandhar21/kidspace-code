@@ -340,6 +340,11 @@ img {
 	}
 }
 
+.pin-spacer {
+	// height: 100% !important;
+	// width: 100% !important;
+}
+
 
 @media screen and (min-width: 800px) {
 	.section-hero {
@@ -482,18 +487,18 @@ img {
 		&__7 {
 			margin-top: -80vh;
 			height: 80vh;
-			background-color: none;
+			background-color: transparent; 
 		}
 	}
 	.impact {
 		&__1 {
-			width: 25% !important;
+			width: 50% !important;
 			p {
 				margin-top: -40vh;
 			}
 		}
 		&__2 {
-			width: 75% !important;
+			width: 125% !important;
 			margin-left: 25%;
 			position: relative;
 			&--1 {
