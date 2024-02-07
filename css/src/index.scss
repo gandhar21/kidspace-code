@@ -340,12 +340,6 @@ img {
 	}
 }
 
-.pin-spacer {
-	// height: 100% !important;
-	// width: 100% !important;
-}
-
-
 @media screen and (min-width: 800px) {
 	.section-hero {
 		height: 100vh;
@@ -475,6 +469,9 @@ img {
 		&__1 {
 			margin-left: 50%;
 		}
+		&__2 {
+			margin-top: -100vh;
+		}
 		&__3 {
 			margin-left: 50%;
 		}
@@ -498,8 +495,9 @@ img {
 			}
 		}
 		&__2 {
-			width: 125% !important;
+			width: 100% !important;
 			margin-left: 25%;
+			margin-top: -100vh;
 			position: relative;
 			&--1 {
 				position: absolute;
@@ -518,7 +516,7 @@ img {
 			}
 		}
 		&__3 {
-			width: 75% !important;
+			width: 100% !important;
 			margin-left: 25%;
 			position: relative;
 			&--1 {
@@ -533,14 +531,15 @@ img {
 			}
 		}
 		&__4 {
-			width: 25% !important;
+			width: 50% !important;
 			p {
 				margin-top: -40vh;
 			}
 		}
 		&__5 {
-			width: 75% !important;
+			width: 100% !important;
 			margin-left: 25%;
+			margin-top: -100vh;
 			position: relative;
 			&--1 {
 				position: absolute;
@@ -559,7 +558,7 @@ img {
 			}
 		}
 		&__6 {
-			width: 75% !important;
+			width: 100% !important;
 			margin-left: 25%;
 			position: relative;
 			&--1 {
@@ -579,12 +578,15 @@ img {
 			}
 		}
 		&__7 {
-			width: 75% !important;
+			width: 100% !important;
 			margin-left: 25%;
 			position: relative;
 		}
 		&__8 {
 			margin-left: 50%;
+		}
+		&__9 {
+			margin-top: -100vh;
 		}
 		&__10 {
 			margin-left: 50%;
@@ -596,6 +598,7 @@ img {
 		}
 		&__14 {
 			margin-left: 50%;
+			margin-top: -100vh;
 			img {
 				width: 100%;
 				height: 50%;
@@ -607,26 +610,33 @@ img {
 		}
 	}
 	.finances {
+		&__2 {
+			margin-left: 50%;
+			margin-top: -100vh;
+		}
 		&__3 {
-			width: 25% !important;
+			width: 25vw !important;
 		}
 		&__4 {
-			width: 75%;
+			width: 75vw !important;
 			margin-left: 25%;
+			margin-top: -100vh;
 		}
 		&__5 {
-			width: 25% !important;
+			width: 25vw !important;
 			margin-left: 75%;
 		}
 		&__6 {
-			width: 75%;
+			width: 75vw !important;
+			margin-top: -100vh;
 		}
 		&__7 {
-			width: 25% !important;
+			width: 25vw !important;
 		}
 		&__8 {
-			width: 75%;
+			width: 75vw !important;
 			margin-left: 25%;
+			margin-top: -100vh;
 		}
 	}
 	.capital-improvements {
@@ -634,6 +644,7 @@ img {
 			margin-left: 50%;
 		}
 		&__2 {
+			margin-top: -100vh;
 			&--2 {
 				width: 100%;
 				height: 50% !important;
@@ -659,6 +670,7 @@ img {
 		}
 		&__4 {
 			margin-left: 50%;
+			margin-top: -100vh;
 			&--2 {
 				width: 100%;
 				height: 50% !important;
@@ -669,13 +681,22 @@ img {
 				height: 50% !important;
 				object-fit: cover !important;
 			}
+			&-1 {
+				margin-left: 50%;
+			}
+			&-2 {
+				margin-left: 50%;
+			}
 		}
 		&__5 {
 			margin-left: 50%;
 		}
+		&__6 {
+			margin-top: -100vh;
+		}
 	}
 	.our-partners {
-		&__1 {
+		&__2 {
 			margin-left: 50%;
 		}
 		&__3 {
