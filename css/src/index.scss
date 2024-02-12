@@ -110,6 +110,69 @@ img {
  *
  * ANCHOR Section Hero
 ------------------------------------------------*/
+.kidspace-header {
+	height: 100vh;
+	background-color: #24AD79;
+	&__logo {
+		display: none;
+		&--mobile {
+			background-color: var(--lemon);
+			height: 12.5vh;
+			display: grid;
+			align-items: center;
+			justify-items: end;
+			img {
+				scale: 0.8;
+			}
+		}
+	}
+	&__title {
+		display: none;
+		font-family: 'Newsreader';
+		font-weight: 500;
+		font-size: 1.3em;
+	}
+	&__menu {
+		padding-top: 12.5vh;
+		li {
+			height: 12.5vh;
+			align-items: center;
+			padding: 0em 1.5em;
+			display: grid;
+		}
+		button {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 500;
+			font-size: 6vw;
+			color: white;
+		}
+		&-item {
+			&--introduction {
+				background-color: var(--teal);
+			}
+			&--impact {
+				background-color: var(--sky);
+			}
+			&--finances {
+				background-color: var(--grape);
+			}
+			&--campus-enhancements {
+				background-color: var(--rose);
+			}
+			&--our-partners {
+				background-color: var(--watermelon);
+			}
+			&--financial-disclosures {
+				background-color: var(--tangerine);
+			}
+		}
+	}
+}
+
+/* 
+ *
+ * ANCHOR Section Hero
+------------------------------------------------*/
 .section-hero {
 	padding-bottom: 5em;
 	background-color: var(--current-color);
@@ -341,8 +404,66 @@ img {
 }
 
 @media screen and (min-width: 800px) {
+	.kidspace-header {
+		position: fixed;
+		top: 0;
+		z-index: 99;
+		display: flex;
+		padding: 4vh;
+		height: 3vh;
+		align-items: center;
+		background-color: white;
+		width: 100vw;
+		&__logo {
+			display: block;
+			&--mobile {
+				display: none;
+			}
+		}
+		&__title {
+			margin-left: 2em;
+			display: block;
+		}
+		&__menu {
+			display: flex;
+			margin-left: auto;
+			padding-top: 0;
+			li {
+				margin-right: 1em;
+				height: auto;
+				align-items: center;
+				padding: 0em;
+				display: block;
+			}
+			button {
+				color: black;
+				font-size: 1vw;
+			}
+			&-item {
+				&--introduction {
+					background-color: transparent;
+				}
+				&--impact {
+					background-color: transparent;
+				}
+				&--finances {
+					background-color: transparent;
+				}
+				&--campus-enhancements {
+					background-color: transparent;
+				}
+				&--our-partners {
+					background-color: transparent;
+				}
+				&--financial-disclosures {
+					background-color: transparent;
+				}
+			}
+		}
+	}
 	.section-hero {
-		height: 100vh;
+		height: 97vh !important;
+		margin-top: 3vh !important;
 		&__running-head {
 			position: absolute;
 			z-index: 2;
@@ -352,7 +473,7 @@ img {
 			right: 0; 
 			margin-left: auto;
 			margin-right: auto;
-			padding-top: 5em;
+			padding-top: 10em;
 			align-items: center;
 			h3 {
 				font-size: 1.2em;
@@ -370,17 +491,32 @@ img {
 			display: grid;
 			place-content: center;
 			margin: 0;
+			font-size: 1.6em;
+			&--financial-disclosures {
+				display: block;
+			}
 		}
 		&__image {
 			position: absolute;
 			z-index: 1;
-			height: 90vh;
-			width: 94vw;
-			margin: 5vh 2vw;
+			height: 85vh;
+			width: 95vw;
+			margin: 7vh 2vw;
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+			}
+		}
+		&__button {
+			&--financial-disclosures {
+				margin-top: 70vh;
+			}
+			&--left {
+				margin-right: 1.5em;
+			}
+			&--right {
+				margin-left: 1.5em;
 			}
 		}
 	}
@@ -656,21 +792,9 @@ img {
 				object-fit: cover !important;
 			}
 		}
-		&__3 {
-			&--2 {
-				width: 100%;
-				height: 50% !important;
-				object-fit: cover !important;
-			}
-			&--3 {
-				width: 100%;
-				height: 50% !important;
-				object-fit: cover !important;
-			}
-		}
 		&__4 {
-			margin-left: 50%;
 			margin-top: -100vh;
+			margin-left: 50%;
 			&--2 {
 				width: 100%;
 				height: 50% !important;
@@ -693,14 +817,25 @@ img {
 		}
 		&__6 {
 			margin-top: -100vh;
+			&--2 {
+				width: 100%;
+				height: 50% !important;
+				object-fit: cover !important;
+			}
+			&--3 {
+				width: 100%;
+				height: 50% !important;
+				object-fit: cover !important;
+			}
 		}
 	}
 	.our-partners {
 		&__2 {
 			margin-left: 50%;
+			margin-top: -100vh;
 		}
 		&__3 {
-			width: 35% !important;
+			width: 35vw !important;
 			img {
 				height: 100%;
 				width: 100%;
@@ -708,8 +843,9 @@ img {
 			}
 		}
 		&__5 {
-			width: 65% !important;
+			width: 65vw !important;
 			margin-left: 35%;
+			margin-top: -100vh;
 			display: flex;
 			&--1 {
 				width: 60%;
@@ -725,6 +861,9 @@ img {
 		&__6 {
 			margin-left: 50%;
 		}
+		&__7 {
+			margin-top: -100vh;
+		}
 		&__8 {
 			width: 100% !important;
 		}
@@ -734,7 +873,10 @@ img {
 				text-align: center;
 			}
 			ul {
-				display: none;
+				button {
+					font-size: 0.7em;
+					line-height: 130%;
+				}
 			}
 			&-center {
 				width: 10vw;
@@ -746,38 +888,191 @@ img {
 			&-government-partners {
 				width: 10vw;
 				position: absolute;
-				top: 20vh;
+				top: 13vh;
 				left: 10vw;
+				&--menu-1 {
+					display: none;
+					width: 15em !important;
+					position: absolute;
+					top: 22vh;
+					left: -4vw;
+				}
+				&--menu-2 {
+					display: none;
+					width: 10em !important;
+					position: absolute;
+					top: 25vh;
+					left: 12vw;
+				}
+				&--menu-3 {
+					display: none;
+					width: 12em !important;
+					position: absolute;
+					top: 9vh;
+					left: 17vw;
+				}
+				&--menu-4 {
+					display: none;
+					position: absolute;
+					top: -8vh;
+					left: 19vw;
+				}
 			}
 			&-educators {
 				width: 10vw;
 				position: absolute;
 				top: 10vh;
 				left: 45vw;
+				&--menu-1 {
+					display: none;
+					width: 15em !important;
+					position: absolute;
+					top: -5vh;
+					left: -15vw;
+				}
+				&--menu-2 {
+					display: none;
+					width: 15em !important;
+					position: absolute;
+					top: -5vh;
+					left: 12vw;
+				}
+				&--menu-3 {
+					display: none;
+					position: absolute;
+					top: 10vh;
+					left: 10vw;
+				}
+				
 			}
 			&-foster-families {
 				width: 10vw;
 				position: absolute;
-				top: 20vh;
+				top: 13vh;
 				left: 75vw;
+				&--menu-1 {
+					display: none;
+					width: 20em !important;
+					position: absolute;
+					top: -12vh;
+					left: -15vw;
+				}
+				&--menu-2 {
+					display: none;
+					width: 10em !important;
+					position: absolute;
+					top: -10vh;
+					left: 7vw;
+				}
+				&--menu-3 {
+					display: none;
+					width: 10em !important;
+					position: absolute;
+					top: 4vh;
+					left: 12vw;
+				}
+				&--menu-4 {
+					display: none;
+					width: 13em !important;
+					position: absolute;
+					top: 18vh;
+					left: 10vw;
+				}
+				&--menu-5 {
+					display: none;
+					width: 13em !important;
+					position: absolute;
+					top: 32vh;
+					left: 3vw;
+				}
+				&--menu-6 {
+					display: none;
+					width: 13em !important;
+					position: absolute;
+					top: 26vh;
+					left: -10vw;
+				}
+				&--menu-7 {
+					display: none;
+					width: 13em !important;
+					position: absolute;
+					top: 10vh;
+					left: -14vw;
+				}
 			}
 			&-arts-community {
 				width: 10vw;
 				position: absolute;
-				top: 55vh;
+				top: 60vh;
 				left: 10vw;
+				&--menu-1 {
+					display: none;
+					width: 15em !important;
+					position: absolute;
+					top: -12vh;
+					left: -7vw;
+				}
+				&--menu-2 {
+					display: none;
+					width: 15em !important;
+					position: absolute;
+					top: 15vh;
+					left: -7vw;
+				}
 			}
 			&-wildlife {
 				width: 10vw;
 				position: absolute;
 				top: 70vh;
 				left: 45vw;
+				&--menu-1 {
+					display: none;
+					width: 15em !important;
+					position: absolute;
+					top: -10vh;
+					left: -15vw;
+				}
+				&--menu-2 {
+					display: none;
+					width: 15em !important;
+					position: absolute;
+					top: -10vh;
+					left: 10vw;
+				}
+				&--menu-3 {
+					display: none;
+					width: 15em !important;
+					position: absolute;
+					top: 7vh;
+					left: 10vw;
+				}
 			}
 			&-health {
 				width: 10vw;
 				position: absolute;
-				top: 55vh;
+				top: 60vh;
 				left: 75vw;
+				&--menu-1 {
+					display: none;
+					width: 15em !important;
+					position: absolute;
+					top: -12vh;
+					left: 7vw;
+				}
+				&--menu-2 {
+					display: none;
+					width: 15em !important;
+					position: absolute;
+					top: 12vh;
+					left: -12vw;
+				}
+				&--menu-3 {
+					display: none;
+					width: 15em !important;
+					position: absolute;
+					top: 12vh;
+					left: 7vw;
+				}
 			}
 		}
 	}
