@@ -326,22 +326,29 @@ $( document ).ready(function() {
 	// 	}
 	//   });
 	  
-	//   gsap.utils.toArray(".parallax").forEach(layer => {
-	// 	const depth = layer.dataset.depth;
-	// 	const movement = -(layer.offsetHeight * depth)
-	// 	tl.to(layer, {y: movement, ease: "none"}, 0)
-	//   });
-
-	  gsap.to(".parallax", {
-		scrollTrigger: {
-		  trigger: ".parallax",
-		  start: "top bottom",
-		  end: "bottom top",
-		  scrub: true
-		}, 
-		y: (i, target) => -200 * target.dataset.speed,
-		ease: "none"
+	  gsap.utils.toArray(".parallax").forEach(layer => {
+		gsap.from(layer, {
+			scrollTrigger: {
+			  trigger: layer,
+			  start: "top bottom",
+			  end: "bottom top",
+			  scrub: false
+			}, 
+			y: (i, target) => 200 * target.dataset.speed,
+			ease: "none"
+		  });
 	  });
+
+	//   gsap.from(".parallax", {
+	// 	scrollTrigger: {
+	// 	  trigger: ".parallax",
+	// 	  start: "top bottom",
+	// 	  end: "bottom top",
+	// 	  scrub: false
+	// 	}, 
+	// 	y: (i, target) => 200 * target.dataset.speed,
+	// 	ease: "none"
+	//   });
 	
 
 });

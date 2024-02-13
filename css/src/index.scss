@@ -347,16 +347,36 @@ img {
 			}
 		}
 	}
-	// &__image {
-	// 	&--scroller {
-	// 		display: flex;
-	// 	}
-	// }
+	&__videos {
+		position: relative;
+		iframe {
+			border: 10px solid var(--sky);
+			border-radius: 10px;
+		}
+		&-item--1 {
+			position: absolute;
+			top: -7vh;
+			left: 0vw;
+			scale: 0.75;
+		}
+		&-item--2 {
+			position: absolute;
+			top: 13vh;
+			left: 20vw;
+			scale: 1.1;
+		}
+		&-item--3 {
+			position: absolute;
+			top: 35vh;
+			left: 2vw;
+			scale: 0.8;
+		}
+	}
 }
 
 /* 
  *
- * ANCHOR Capital Improvements
+ * ANCHOR Our Partners
 ------------------------------------------------*/
 .our-partners {
 	&__menu {
@@ -491,7 +511,7 @@ img {
 			display: grid;
 			place-content: center;
 			margin: 0;
-			font-size: 1.6em;
+			font-size: 2vw;
 			&--financial-disclosures {
 				display: block;
 			}
@@ -598,6 +618,34 @@ img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+			}
+		}
+		&__videos {
+			height: 100vh;
+			width: 50%;
+			position: relative;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&-item--1 {
+				position: absolute;
+				top: 12vh;
+				left: 33vw;
+				scale: 0.8;
+			}
+			&-item--2 {
+				position: absolute;
+				top: 40vh;
+				left: 10vw;
+				scale: 1.2;
+			}
+			&-item--3 {
+				position: absolute;
+				top: 70vh;
+				left: 25vw;
+				scale: 0.9;
 			}
 		}
 	}
@@ -1073,6 +1121,30 @@ img {
 					top: 12vh;
 					left: 7vw;
 				}
+			}
+		}
+	}
+	.annotation {
+		&__1 {
+			h2::after {
+				content: url("../../images/Annotations/introduction-hero.svg");
+				width: 20%;
+				height: auto;
+				position: absolute;
+				left: 67%;
+				display: block;
+				top: 45%;
+			}
+		}
+		&__2 {
+			h2::after {
+				content: url("../../images/Annotations/impact-hero.svg");
+				width: 13vw;
+				height: auto;
+				position: absolute;
+				left: 63vw;
+				display: block;
+				top: 46vh;
 			}
 		}
 	}
