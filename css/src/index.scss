@@ -122,16 +122,16 @@ body {
 	 -ms-overflow-style: none; /* for Internet Explorer, Edge */
 	 scrollbar-width: none; /* for Firefox */
 	 //overflow-y: scroll;
-	 //overflow-x: hidden;
+	 overflow-x: hidden;
 }
-body::-webkit-scrollbar {
-	display: none;
+::-webkit-scrollbar {
+	width: 0;
+    height: 0;
 }
 img {
 	display: block;
 }
-
-main {
+html {
 	-ms-overflow-style: none; /* for Internet Explorer, Edge */
 	scrollbar-width: none; /* for Firefox */
 }
@@ -426,7 +426,8 @@ main {
 				font-size: clamp(1em, 5em, 18vw);
 				&--trillion {
 					font-size: 22vw;
-					max-width: 6ch;
+					//width: 6ch;
+					word-break: break-all;
 				}
 				&--white {
 					color: white;
@@ -1200,8 +1201,10 @@ main {
 				font-size: 3.5em;
 				padding: 0em 2em;
 				&--small {
-					max-width: 27ch;
 					font-size: 2.3em;
+				}
+				&--smaller {
+					font-size: 2em;
 				}
 			}
 			&-caption {
@@ -1246,6 +1249,8 @@ main {
 					max-width: 30ch;
 					line-height: 140%;
 					font-size: 1.1em;
+					margin-left: auto;
+    				margin-right: auto;
 					&--finances {
 						width: 100%;
 						text-align: center;
@@ -1257,7 +1262,7 @@ main {
 					font-size: clamp(1em, 8vw, 25vw);
 					&--trillion {
 						font-size: 10vw;
-						max-width: 10ch;
+						max-width: 9ch;
 					}
 				}
 			}
@@ -1356,6 +1361,9 @@ main {
 		}
 		&__5 {
 			margin-left: 50%;
+			&--1 {
+				max-width: 27ch;
+			}
 		}
 		&__6 {
 			width: 100% !important;
@@ -1376,7 +1384,7 @@ main {
 		&__1 {
 			width: 50% !important;
 			p {
-				margin-top: -30vh;
+				margin-top: -40vh;
 			}
 		}
 		&__2 {
@@ -1466,6 +1474,11 @@ main {
 			width: 100% !important;
 			margin-left: 25%;
 			position: relative;
+			&--1 {
+				position: absolute;
+				top: 19vh;
+				left: 6vw;
+			}
 		}
 		&__8 {
 			margin-left: 50%;
@@ -2079,9 +2092,9 @@ main {
 				height: auto;
 				position: absolute;
 				z-index: -1;
-				left: -7vw;
+				left: 8vw;
 				display: block;
-				top: -5vh;
+				top: -15vh;
 			  }
 		}
 		&__15 {
@@ -2091,9 +2104,9 @@ main {
 				height: auto;
 				position: absolute;
 				z-index: -1;
-				left: 45vw;
+				left: 14vw;
 				display: block;
-				top: 32vh;
+				top: -11vh;
 			  }
 		}
 		&__16 {
@@ -2115,21 +2128,21 @@ main {
 				height: auto;
 				position: absolute;
 				z-index: -1;
-				left: 17vw;
+				left: 5vw;
 				display: block;
-				top: 51vh;
+				top: 12vh;
 			  }
 		}
 		&__18 {
 			&::after {
 				content: url("../../images/Annotations/partners-hero.svg");
-				width: 20vw;
+				width: 36vw;
 				height: auto;
 				position: absolute;
 				z-index: -1;
 				left: 0vw;
 				display: block;
-				top: -5vh;
+				top: 14vh;
 			  }
 		}
 		&__19 {
