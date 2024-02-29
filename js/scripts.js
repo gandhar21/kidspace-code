@@ -120,7 +120,7 @@ $( document ).ready(function() {
 			//setting animating flag to true
 			isAnimating = true;
 			$currentSlide = $slide;
-			console.log(pageHeight);
+			//console.log(pageHeight);
 
 			//console.log($currentSlide);
 			// console.log($currentSlide.index(".slide"));
@@ -217,6 +217,7 @@ $( document ).ready(function() {
 			scrollTrigger: {
 				trigger: ".introduction__1",
 				start: "top 99%",
+				toggleActions:'restart none reverse reset'
 			},
 			transform: 'translateY(-200vh)',
 			duration: 1,
@@ -226,6 +227,7 @@ $( document ).ready(function() {
 			scrollTrigger: {
 				trigger: ".impact__1",
 				start: "top 99%",
+				toggleActions:'restart none reverse reset'
 			},
 			transform: 'translateY(-200vh)',
 			duration: 1,
@@ -235,6 +237,7 @@ $( document ).ready(function() {
 			scrollTrigger: {
 				trigger: ".finances__1",
 				start: "top 99%",
+				toggleActions:'restart none reverse reset'
 			},
 			transform: 'translateY(-200vh)',
 			duration: 1,
@@ -244,6 +247,7 @@ $( document ).ready(function() {
 			scrollTrigger: {
 				trigger: ".capital-improvements__1",
 				start: "top 99%",
+				toggleActions:'restart none reverse reset'
 			},
 			transform: 'translateY(-200vh)',
 			duration: 1,
@@ -253,6 +257,7 @@ $( document ).ready(function() {
 			scrollTrigger: {
 				trigger: ".our-partners__1",
 				start: "top 99%",
+				toggleActions:'restart none reverse reset'
 			},
 			transform: 'translateY(-200vh)',
 			duration: 1,
@@ -262,6 +267,7 @@ $( document ).ready(function() {
 			scrollTrigger: {
 				trigger: ".conclusion__1",
 				start: "top 99%",
+				toggleActions:'restart none reverse reset'
 			},
 			transform: 'translateY(-200vh)',
 			duration: 1,
@@ -312,6 +318,7 @@ $( document ).ready(function() {
 		scrollTrigger: {
 			trigger: ".conclusion__3",
 			start: "top top",
+			toggleActions:'restart none none reset'
 		},
 		repeat: 0,
 	});
@@ -370,6 +377,7 @@ $( document ).ready(function() {
 		scrollTrigger: {
 			trigger: ".finances__4",
 			start: "top 20%",
+			toggleActions:'restart none none reset'
 			//markers: true,
 		},
 		repeat: 0,
@@ -391,6 +399,7 @@ $( document ).ready(function() {
 		scrollTrigger: {
 			trigger: ".finances__5",
 			start: "top 20%",
+			toggleActions:'restart none none reset'
 		},
 		repeat: 0,
 	});
@@ -404,6 +413,7 @@ $( document ).ready(function() {
 		scrollTrigger: {
 			trigger: ".finances__7",
 			start: "top 20%",
+			toggleActions:'restart none none reset'
 		},
 		repeat: 0,
 	});
@@ -420,7 +430,8 @@ $( document ).ready(function() {
 				trigger: layer,
 				start: "top bottom",
 				end: "bottom top",
-				scrub: false
+				scrub: false,
+				toggleActions:'restart none none reset'
 			  }, 
 			textContent: 0,
 			duration: 1.5,
@@ -440,7 +451,8 @@ $( document ).ready(function() {
 				trigger: layer,
 				start: "top bottom",
 				end: "bottom top",
-				scrub: false
+				scrub: false,
+				toggleActions:'restart none none reset'
 			  }, 
 			textContent: 0,
 			duration: 1.5,
@@ -460,7 +472,8 @@ $( document ).ready(function() {
 				trigger: layer,
 				start: "top bottom",
 				end: "bottom top",
-				scrub: false
+				scrub: false,
+				toggleActions:'restart none none reset'
 			  }, 
 			textContent: 0,
 			duration: 1.5,
@@ -616,7 +629,7 @@ function headerMenu(id) {
 
 			let listItems = document.querySelectorAll(".kidspace-header__menu-item");
 			const selectedListItem = document.getElementsByClassName("kidspace-header__menu-item--introduction");
-			console.log(selectedListItem);
+			//console.log(selectedListItem);
 			for(let i = 0; i<buttons.length; i++) {
 				listItems[i].style.backgroundImage = "none";
 			}
@@ -710,9 +723,7 @@ gsap.utils.toArray(".section").forEach(section => {
 	ScrollTrigger.create({
 		trigger: section,
 		onEnter: () => myEnterFunc(section),
-		//onLeave: () => myLeaveFunc(section),
 		onEnterBack: () => myEnterFunc(section),
-		//onLeaveBack: () => myLeaveFunc(section)
 	  });
 });
 function myEnterFunc(section) {
