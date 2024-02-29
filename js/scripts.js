@@ -120,6 +120,7 @@ $( document ).ready(function() {
 			//setting animating flag to true
 			isAnimating = true;
 			$currentSlide = $slide;
+			console.log(pageHeight);
 
 			//console.log($currentSlide);
 			// console.log($currentSlide.index(".slide"));
@@ -224,7 +225,7 @@ $( document ).ready(function() {
 		gsap.from(".impact__1", {
 			scrollTrigger: {
 				trigger: ".impact__1",
-				start: "top 90%",
+				start: "top 99%",
 			},
 			transform: 'translateY(-200vh)',
 			duration: 1,
@@ -233,7 +234,7 @@ $( document ).ready(function() {
 		gsap.from(".finances__1", {
 			scrollTrigger: {
 				trigger: ".finances__1",
-				start: "top 90%",
+				start: "top 99%",
 			},
 			transform: 'translateY(-200vh)',
 			duration: 1,
@@ -242,7 +243,7 @@ $( document ).ready(function() {
 		gsap.from(".capital-improvements__2", {
 			scrollTrigger: {
 				trigger: ".capital-improvements__1",
-				start: "top 90%",
+				start: "top 99%",
 			},
 			transform: 'translateY(-200vh)',
 			duration: 1,
@@ -251,7 +252,7 @@ $( document ).ready(function() {
 		gsap.from(".our-partners__1", {
 			scrollTrigger: {
 				trigger: ".our-partners__1",
-				start: "top 90%",
+				start: "top 99%",
 			},
 			transform: 'translateY(-200vh)',
 			duration: 1,
@@ -260,7 +261,7 @@ $( document ).ready(function() {
 		gsap.from(".conclusion__2", {
 			scrollTrigger: {
 				trigger: ".conclusion__1",
-				start: "top 90%",
+				start: "top 99%",
 			},
 			transform: 'translateY(-200vh)',
 			duration: 1,
@@ -309,7 +310,7 @@ $( document ).ready(function() {
 	* */
 	var tl2 = gsap.timeline({
 		scrollTrigger: {
-			trigger: "conclusion__3",
+			trigger: ".conclusion__3",
 			start: "top top",
 		},
 		repeat: 0,
@@ -704,6 +705,115 @@ function headerMenu(id) {
 		
 	}
 }
+
+gsap.utils.toArray(".section").forEach(section => {
+	ScrollTrigger.create({
+		trigger: section,
+		onEnter: () => myEnterFunc(section),
+		//onLeave: () => myLeaveFunc(section),
+		onEnterBack: () => myEnterFunc(section),
+		//onLeaveBack: () => myLeaveFunc(section)
+	  });
+});
+function myEnterFunc(section) {
+	var id = section.id;
+	id = id + "-button";
+	//console.log(id);
+
+	if(id == "introduction-button") {
+		let buttons = document.querySelectorAll(".kidspace-header__menu-item-button");
+		const buttonSelected = document.getElementById(id);
+		for(let i = 0; i<buttons.length; i++) {
+			buttons[i].style.color = "#000000";
+		}
+		buttonSelected.style.color = "#09B4A4";
+
+		let listItems = document.querySelectorAll(".kidspace-header__menu-item");
+		const selectedListItem = document.getElementsByClassName("kidspace-header__menu-item--introduction");
+		for(let i = 0; i<buttons.length; i++) {
+			listItems[i].style.backgroundImage = "none";
+		}
+		selectedListItem[0].style.backgroundImage = "url(../../images/underline-introduction.svg)";
+	}
+	if(id == "impact-button") {
+		let buttons = document.querySelectorAll(".kidspace-header__menu-item-button");
+		const buttonSelected = document.getElementById(id);
+		for(let i = 0; i<buttons.length; i++) {
+			buttons[i].style.color = "black";
+		}
+		buttonSelected.style.color = "#03A2D6";
+
+		let listItems = document.querySelectorAll(".kidspace-header__menu-item");
+		const selectedListItem = document.getElementsByClassName("kidspace-header__menu-item--impact");
+		for(let i = 0; i<buttons.length; i++) {
+			listItems[i].style.backgroundImage = "none";
+		}
+		selectedListItem[0].style.backgroundImage = "url(../../images/underline-impact.svg)";
+	}
+	if(id == "finances-button") {
+		let buttons = document.querySelectorAll(".kidspace-header__menu-item-button");
+		const buttonSelected = document.getElementById(id);
+		for(let i = 0; i<buttons.length; i++) {
+			buttons[i].style.color = "black";
+		}
+		buttonSelected.style.color = "#733F8B";
+
+		let listItems = document.querySelectorAll(".kidspace-header__menu-item");
+		const selectedListItem = document.getElementsByClassName("kidspace-header__menu-item--finances");
+		for(let i = 0; i<buttons.length; i++) {
+			listItems[i].style.backgroundImage = "none";
+		}
+		selectedListItem[0].style.backgroundImage = "url(../../images/underline-fiannces.svg)";
+	}
+	if(id == "capital-improvements-button") {
+		let buttons = document.querySelectorAll(".kidspace-header__menu-item-button");
+		const buttonSelected = document.getElementById(id);
+		for(let i = 0; i<buttons.length; i++) {
+			buttons[i].style.color = "black";
+		}
+		buttonSelected.style.color = "#D4227C";
+
+		let listItems = document.querySelectorAll(".kidspace-header__menu-item");
+		const selectedListItem = document.getElementsByClassName("kidspace-header__menu-item--campus-enhancements");
+		for(let i = 0; i<buttons.length; i++) {
+			listItems[i].style.backgroundImage = "none";
+		}
+		selectedListItem[0].style.backgroundImage = "url(../../images/underline-campus.svg)";
+	}
+	if(id == "our-partners-button") {
+		let buttons = document.querySelectorAll(".kidspace-header__menu-item-button");
+		const buttonSelected = document.getElementById(id);
+		for(let i = 0; i<buttons.length; i++) {
+			buttons[i].style.color = "black";
+		}
+		buttonSelected.style.color = "#F53F4E";
+
+		let listItems = document.querySelectorAll(".kidspace-header__menu-item");
+		const selectedListItem = document.getElementsByClassName("kidspace-header__menu-item--our-partners");
+		for(let i = 0; i<buttons.length; i++) {
+			listItems[i].style.backgroundImage = "none";
+		}
+		selectedListItem[0].style.backgroundImage = "url(../../images/underline-partners.svg)";
+	}
+	if(id == "financial-disclosures-button") {
+		let buttons = document.querySelectorAll(".kidspace-header__menu-item-button");
+		const buttonSelected = document.getElementById(id);
+		for(let i = 0; i<buttons.length; i++) {
+			buttons[i].style.color = "black";
+		}
+		buttonSelected.style.color = "#FB7900";
+
+		let listItems = document.querySelectorAll(".kidspace-header__menu-item");
+		const selectedListItem = document.getElementsByClassName("kidspace-header__menu-item--financial-disclosures");
+		for(let i = 0; i<buttons.length; i++) {
+			listItems[i].style.backgroundImage = "none";
+		}
+		selectedListItem[0].style.backgroundImage = "url(../../images/underline-financial-disclosures.svg)";
+	}
+}
+// function myLeaveFunc(section) {
+// 	console.log(section);
+// }
 
 /**
 * Partners menu
