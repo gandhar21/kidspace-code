@@ -6,6 +6,9 @@
 
 <meta charset="utf-8">
 <meta content="initial-scale=1.0,width=device-width" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -18,6 +21,11 @@
 <link href="css/build/reset.css" rel="stylesheet">
 <link href="css/build/index.css" rel="stylesheet">
 
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+
 </head>
 
 <body>
@@ -25,7 +33,7 @@
 	<header class="kidspace-header">
 		<div class="kidspace-header__mobile-title" id="js-kidspace-header__mobile-title">
 			<div class="kidspace-header__logo" id="js-kidspace-header__logo">
-				<img src="images\Logos\kidspace logo.svg">
+				<a href="#"><img src="images\Logos\kidspace logo.svg"></a>
 			</div>
 			<div class="kidspace-header__title" id="js-kidspace-header__title">
 				<p>2022 Annual Report</p>
@@ -73,7 +81,7 @@
 		</ul>
 	</header>
 
-	<main class="kidspace-main" id="parallax-container">
+	<main class="kidspace-main slides-container" id="parallax-container">
 
 		<div class="splash-logo">
 			<div class="splash-logo__1 slide-gsap">
@@ -84,18 +92,22 @@
 			</div>
 		</div>
 
-		<div class="title-page">
-			<div class="section-hero section-hero--title-page slide slide-gsap">
+		<div class="title-page section-gsap">
+			<div class="section-hero section-hero--title-page slide">
 				<div class="section-hero__image section-hero__image--title-page">
-					<img src="images\00 - Introduction\072 KidspaceButterfly-Jamie Pham.jpeg">
+					<img src="images\00 - Introduction\072 KidspaceButterfly-Jamie Pham.jpg">
 				</div>
 				<div class="section-hero__title section-hero__title--title-page">
 					<h2><span>2022 </span>Annual Report</h2>
 				</div>
+				<div class="section-hero__scroll-down">
+					<p>Scroll down</p>
+					<p>&darr;</p>
+				</div>
 			</div>
 		</div>
 
-		<div class="introduction section" id="introduction">
+		<div class="introduction section section-gsap" id="introduction">
 
 			<div class="section-hero color-context--teal slide slide-gsap section-hero--introduction" id="introduction-menu-slide">
 				<div class="section-hero__running-head">
@@ -113,7 +125,7 @@
 				<img src="images\01 - Section 1\361 Hawk Kidspace22-Jamie Pham.jpeg">
 			</div>
 			<div class="section-content__slide color-context--teal introduction__2 slide slide-gsap">
-				<p class="section-content__slide-quote">Nothing lights up a child's brain like play.</p>
+				<p class="section-content__slide-quote section-content__slide-quote--large">Nothing lights up a child's brain like play.</p>
 				<p class="section-content__slide-caption">— Dr. Stuart Brown</p>
 			</div>
 			<div class="section-content__slide color-context--teal35 introduction__3 slide slide-gsap">
@@ -122,21 +134,21 @@
 			<div class="section-content__image introduction__4 slide slide-gsap">
 				<img src="images\01 - Section 1\277 WinterFrolic22-Jamie Pham 1-mobile.png">
 			</div>
-			<div class="section-content__slide color-context--teal introduction__5 slide slide-gsap">
+			<div class="section-content__slide color-context--teal introduction__5 slide">
 				<p class="section-content__slide-quote section-content__slide-quote--small parallax introduction__5--1" data-speed="0.8">For children to flourish in school and in life, we cannot wait until they enter kindergarten to promote their health, safety, and learning.</p>
-				<p class="section-content__slide-caption parallax" data-speed="0.8">— City of Pasadena Early Childhood Development Policy, approved November 2022</p>
+				<p class="section-content__slide-caption parallax introduction__5--2" data-speed="0.2">— City of Pasadena Early Childhood Development Policy, approved November 2022</p>
 			</div>
-			<div class="section-content__image introduction__6 slide slide-gsap" id="impact-menu-slide">
+			<div class="section-content__image introduction__6 slide" id="impact-menu-slide">
 				<img src="images\01 - Section 1\047 Car Kidspace22-Jamie Pham 1-mobile.png">
 			</div>
-			<div class="section-content__slide color-context--teal introduction__7 slide slide-gsap">
+			<div class="section-content__slide color-context--teal introduction__7 slide slide-last">
 				<p class="section-content__slide-subhead introduction__7--1">Our mission</p>
 				<p class="section-content__slide-quote section-content__slide-quote--small introduction__7--2 parallax" data-speed="0.8">To nurture the potential of all children through kid-driven experiences, inspiring them to become joyful, active learners.</p>
 			</div>
 
 		</div>
 
-		<div class="impact section" id="impact">
+		<div class="impact section section-gsap" id="impact">
 
 			<div class="section-hero color-context--sky slide slide-gsap">
 				<div class="section-hero__running-head">
@@ -144,7 +156,7 @@
 					<p>IMPACT</p>
 				</div>
 				<div class="section-hero__image">
-					<img src="images\02 - Section 2\kidspace_2022_selects_00025.jpeg">
+					<img src="images\02 - Section 2\kidspace_2022_selects_00025.jpg">
 				</div>
 				<div class="section-hero__title">
 					<h2 class="annotation__2">Helping Children Thrive & Play Every Day</h2>
@@ -153,10 +165,10 @@
 			<div class="section-content__slide color-context--sky impact__1 slide slide-gsap">
 				<p class="section-content__slide-subsection-head">Our Community<br>by the Numbers</p>
 			</div>
-			<div class="section-content__slide color-context--sky35 impact__2 slide slide-gsap">
+			<div class="section-content__slide color-context--sky35 impact__2 slide">
 				<div class="section-content__slide-stats impact__2--1 parallax annotation__3" data-speed="0.8">
 					<div class="section-content__slide-stats-number section-content__slide-stats-number--flex">
-						<h4 class="number-animate-10">83</h4>
+						<h4>83</h4>
 						<h4>%</h4>
 					</div>
 					<p class="section-content__slide-stats-caption">83% of PUSD schools are Title 1</p>
@@ -164,24 +176,27 @@
 				<div class="section-content__slide-stats impact__2--2 parallax annotation__4" data-speed="0.8">
 					<div class="section-content__slide-stats-number section-content__slide-stats-number--flex">
 						<h4>&lt;</h4>
-						<h4 class="number-animate-10">50</h4>
+						<h4 class="number-animate">50</h4>
 						<h4>%</h4>
 					</div>
 					<p class="section-content__slide-stats-caption">Less than 50% kindergarten readiness in low-income families</p>
 				</div>
 				<div class="section-content__slide-stats impact__2--3 parallax annotation__5" data-speed="0.8">
-					<h4 class="section-content__slide-stats-number number-animate-1000">1387</h4>
+					<h4 class="section-content__slide-stats-number">1,387</h4>
 					<p class="section-content__slide-stats-caption">1,387 children aged 0-5 live below poverty level in Pasadena</p>
 				</div>
 			</div>
-			<div class="section-content__slide color-context--sky35 impact__3 slide slide-gsap">
+			<div class="section-content__slide color-context--sky35 impact__3 slide">
 				<div class="section-content__slide-stats impact__3--1 parallax annotation__6" data-speed="0.8">
-					<h4 class="section-content__slide-stats-number number-animate-1000">32000</h4>
+					<div class="section-content__slide-stats-number section-content__slide-stats-number--flex">
+						<h4 class="number-animate-10000 ">32000</h4>
+						<h4>+</h4>
+					</div>
 					<p class="section-content__slide-stats-caption">Over 32,000 children are in foster care in LA</p>
 				</div>
 				<div class="section-content__slide-stats impact__3--2 parallax annotation__7" data-speed="0.8">
 					<div class="section-content__slide-stats-number section-content__slide-stats-number--flex">
-						<h4 class="number-animate-10">43</h4>
+						<h4>43</h4>
 						<h4>%</h4>
 					</div>
 					<p class="section-content__slide-stats-caption">Only 43% of kindergartners with low economic status have visited a museum</p>
@@ -190,41 +205,41 @@
 			<div class="section-content__slide color-context--sky impact__4 slide">
 				<p class="section-content__slide-subsection-head">Kidspace by the Numbers</p>
 			</div>
-			<div class="section-content__slide color-context--sky35 impact__5 slide slide-gsap">
+			<div class="section-content__slide color-context--sky35 impact__5 slide">
 				<div class="section-content__slide-stats impact__5--1 parallax annotation__8" data-speed="0.8">
-					<h4 class="section-content__slide-stats-number number-animate-1000">325000</h4>
+					<h4 class="section-content__slide-stats-number number-animate-100000">325000</h4>
 					<p class="section-content__slide-stats-caption">annual visitors</p>
 				</div>
 				<div class="section-content__slide-stats impact__5--2 parallax annotation__9" data-speed="0.8">
-					<h4 class="section-content__slide-stats-number number-animate-1000">40000</h4>
+					<h4 class="section-content__slide-stats-number">40,000</h4>
 					<p class="section-content__slide-stats-caption">free or reduced-price admissions</p>
 				</div>
 				<div class="section-content__slide-stats impact__5--3 parallax annotation__10" data-speed="0.8">
-					<h4 class="section-content__slide-stats-number number-animate-1000">6738</h4>
+					<h4 class="section-content__slide-stats-number">6,738</h4>
 					<p class="section-content__slide-stats-caption">member families</p>
 				</div> 
 			</div>
-			<div class="section-content__slide color-context--sky35 impact__6 slide slide-gsap">
+			<div class="section-content__slide color-context--sky35 impact__6 slide">
 				<div class="section-content__slide-stats impact__6--1 parallax annotation__11" data-speed="0.8">
-					<h4 class="section-content__slide-stats-number number-animate-1000">1438</h4>
+					<h4 class="section-content__slide-stats-number">1,438</h4>
 					<p class="section-content__slide-stats-caption">free school visits</p>
 				</div>
 				<div class="section-content__slide-stats impact__6--2 parallax annotation__12" data-speed="0.8">
-					<h4 class="section-content__slide-stats-number number-animate-1000">30000</h4>
+					<h4 class="section-content__slide-stats-number number-animate-10000">30000</h4>
 					<p class="section-content__slide-stats-caption">families engaged for free offsite</p>
 				</div>
-				<div class="section-content__slide-stats impact__6--3 parallax annotation__13" data-speed="0.8">
-					<h4 class="section-content__slide-stats-number number-animate-1000">11500</h4>
+				<div class="section-content__slide-stats impact__6--3 parallax annotation__13" data-speed="0.6">
+					<h4 class="section-content__slide-stats-number">11,500</h4>
 					<p class="section-content__slide-stats-caption">caterpillars adopted</p>
 				</div> 
 			</div>
-			<div class="section-content__slide color-context--sky35 impact__7 slide slide-gsap">
+			<div class="section-content__slide color-context--sky35 impact__7 slide">
 				<div class="section-content__slide-stats parallax annotation__14 impact__7--1" data-speed="0.8">
-					<h4 class="section-content__slide-stats-number section-content__slide-stats-number--trillion number-animate-1000">1000<br>00000<br>0000</h4>
+					<h4 class="section-content__slide-stats-number section-content__slide-stats-number--trillion number-animate-10000000">1000<br>00000<br>0000</h4>
 					<p class="section-content__slide-stats-caption section-content__slide-stats-caption--trillion">giggles (roughly)</p>
 				</div>
 			</div>
-			<div class="section-content__slide color-context--sky impact__8 slide slide-gsap">
+			<div class="section-content__slide color-context--sky impact__8 slide">
 				<p class="section-content__slide-subsection-head section-content__slide-subsection-head--large section-content__slide-subsection-head--impact parallax" data-speed="0.8">Impact Stories</p>
 				<p class="section-content__slide-head parallax" data-speed="0.8" lang="en">My Master&shy;pi&shy;eces</p>
 			</div>
@@ -233,26 +248,27 @@
 			</div>
 			<div class="section-content__slide color-context--sky35 impact__10 slide slide-gsap">
 				<p class="section-content__slide-text parallax" data-speed="0.8">For the first time since the pandemic, Pasadena Unified School District field trips returned to Kidspace in 2022. Kidspace welcomed every PUSD kindergarten class, over 1200 students and teachers in all. Each class visit included outdoor learning experiences exploring the butterfly life cycle, camouflage, mimicry, and color through hands-on science and art activities. Kidspace supported the on-site visit with award-winning digital content for the classroom.</p>
+				<img  class="parallax impact__10-1" data-speed="1.2" src="images\Annotations\impact-video.svg">
 			</div>
 			<div class="section-content__videos impact__11 slide" id="finances-menu-slide">
-				<img src="images/02 - Section 2/butterfly-BG.jpeg">
-				<iframe id="iframe-1" class="section-content__videos-item section-content__videos-item--1" width="270" height="150"
-				src="https://www.youtube.com/embed/0LZA0s7ri_k?si=bbm11wNYleJ4o6qB">
-				</iframe>
-				<iframe class="section-content__videos-item section-content__videos-item--2" width="270" height="150"
-				src="https://www.youtube.com/embed/yZGZsDW-NWI?si=gjgKC1pvUJ3E0fL4">
-				</iframe>
-				<iframe class="section-content__videos-item section-content__videos-item--3" width="270" height="150"
-				src="https://www.youtube.com/embed/1jr1bnmhoCg?si=8KDAQbc9gZTZ-sH1">
-				</iframe>
+				<img src="images\02 - Section 2\butterfly-BG.jpg">
+				<video class="section-content__videos-item section-content__videos-item--1" preload="metadata" poster="images\02 - Section 2\video-1-thumbnail.png">
+					<source src="https://res.cloudinary.com/dpq2sewae/video/upload/f_auto:video,q_auto/tlywrsjh98bdbgzbzpc8 " type="video/mp4">
+				</video>
+				<video class="section-content__videos-item section-content__videos-item--2" preload="metadata" poster="images\02 - Section 2\video-2-thumbnail.png">
+					<source src="https://res.cloudinary.com/dpq2sewae/video/upload/f_auto:video,q_auto/ah3da4gdo5b57stsgsw6 " type="video/mp4">
+				</video>
+				<video class="section-content__videos-item section-content__videos-item--3" preload="metadata" poster="images\02 - Section 2\video-3-thumbnail.png">
+					<source src="https://res.cloudinary.com/dpq2sewae/video/upload/f_auto:video,q_auto/gc06ijrwwxaz5iwactym" type="video/mp4">
+				</video>
 			</div>
-			<div class="section-content__slide color-context--sky impact__13 slide slide-gsap">
+			<div class="section-content__slide color-context--sky impact__13 slide">
 				<p class="section-content__slide-subsection-head section-content__slide-subsection-head--large section-content__slide-subsection-head--impact parallax" data-speed="0.8">Impact Stories</p>
 				<p class="section-content__slide-head parallax" data-speed="0.8">Big Day of Play</p>
 			</div>
 			<div class="section-content__image impact__14 slide slide-gsap">
-				<img src="images\02 - Section 2\DFA_4196.jpeg">
-				<img src="images\02 - Section 2\DFA_4215.jpeg">
+				<img src="images\02 - Section 2\DFA_4196.jpg">
+				<img src="images\02 - Section 2\DFA_4215.jpg">
 			</div>
 			<div class="section-content__slide color-context--sky35 impact__15 slide slide-gsap">
 				<p class="section-content__slide-text parallax" data-speed="0.8">On October 20, 2022, Kidspace opened exclusively for some very special guests of Los Angeles County Supervisor Kathryn Barger, over 700 youth under the supervision of the Department of Children and Family Services and their caregivers. The joyful event included a day exploring Kidspace’s exhibits, a Halloween parade, and pumpkin decorating.</p>
@@ -260,14 +276,14 @@
 			<div class="section-content__image impact__16 slide slide-gsap">
 				<img src="images\02 - Section 2\DFA_4231-mobile.png">
 			</div>
-			<div class="section-content__slide color-context--sky impact__17 slide slide-gsap" id="campus-menu-slide">
-				<p class="section-content__slide-quote section-content__slide-quote--smaller parallax" data-speed="0.8">I truly believe that children must be exposed to positive play experiences like those offered at Kidspace. Through play, children learn how to navigate the world with confidence, and that in turn helps unlock their potential.</p>
-				<p class="section-content__slide-caption parallax" data-speed="0.8">— Supervisor Kathryn Barger</p>
+			<div class="section-content__slide color-context--sky impact__17 slide slide-last" id="campus-menu-slide">
+				<p class="section-content__slide-quote section-content__slide-quote--smaller parallax impact__17--1" data-speed="0.8">I truly believe that children must be exposed to positive play experiences like those offered at Kidspace. Through play, children learn how to navigate the world with confidence, and that in turn helps unlock their potential.</p>
+				<p class="section-content__slide-caption parallax impact__17--2" data-speed="0.2">— Supervisor Kathryn Barger</p>
 			</div>
 
 		</div>
 
-		<div class="finances section" id="finances">
+		<div class="finances section section-gsap" id="finances">
 
 			<div class="section-hero color-context--grape slide slide-gsap">
 				<div class="section-hero__running-head">
@@ -275,7 +291,7 @@
 					<p>FINANCES</p>
 				</div>
 				<div class="section-hero__image">
-					<img src="images\03 - Section 3\296 KidspaceButterfly-Jamie Pham.jpeg">
+					<img src="images\03 - Section 3\296 KidspaceButterfly-Jamie Pham.jpg">
 				</div>
 				<div class="section-hero__title">
 					<h2 class="annotation__15">By the Numbers</h2>
@@ -292,12 +308,12 @@
 					<p class="section-content__slide-stats-caption section-content__slide-stats-caption--white section-content__slide-stats-caption--finances">above average</p>
 				</div>
 			</div>
-			<div class="section-content__slide color-context--grape finances__3 slide slide-gsap">
+			<div class="section-content__slide color-context--grape finances__3 slide">
 				<p class="section-content__slide-subhead parallax" data-speed="0.8">2022 Financials</p>
 				<p class="section-content__slide-head section-content__slide-head--small parallax" data-speed="0.8">Annual Revenue</p>
 			</div>
-			<div class="section-content__slide section-content__slide--scroller color-context--grape35 finances__4 slide slide-gsap">
-				<p class="section-content__slide-subhead section-content__slide-subhead--graph">Scroll to see details of our Annual Revenue growth between 2017 and 2022 →</p>
+			<div class="section-content__slide section-content__slide--scroller color-context--grape35 finances__4 slide">
+				<p class="section-content__slide-subhead section-content__slide-subhead--graph">Scroll to see details of our Annual Revenue growth between 2019 and 2022 →</p>
 				<svg class="section-content__chart" xmlns="http://www.w3.org/2000/svg" id="Layer_2" viewBox="0 0 934.7 804.55">
 					<defs>
 						<style>.cls-1--chart1{fill:#fff}.cls-2--chart1{fill:#573271}.cls-3,.cls-4{fill:#6c4386}.cls-4,.cls-5{stroke:#fff}.cls-5{fill:#9880ad}</style>
@@ -330,19 +346,19 @@
 					</g>
 				</svg>
 			</div>
-			<div class="section-content__slide color-context--grape finances__5 slide slide-gsap">
+			<div class="section-content__slide color-context--grape finances__5 slide">
 				<p class="section-content__slide-subhead parallax" data-speed="0.8">2022 Financials</p>
 				<p class="section-content__slide-head section-content__slide-head--small parallax" data-speed="0.8">General Admission Revenue by Month</p>
 			</div>
-			<div class="section-content__slide section-content__slide--scroller color-context--grape35 finances__6 slide slide-gsap">
-				<p class="section-content__slide-subhead section-content__slide-subhead--graph">Scroll to see details of our Annual Revenue growth between 2017 and 2022 →</p>
-				<svg id="Layer_2" class="section-content__chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 988.6 610.81">
+			<div class="section-content__slide section-content__slide--scroller color-context--grape35 finances__6 slide">
+				<p class="section-content__slide-subhead section-content__slide-subhead--graph">Scroll to see details of our Annual Revenue growth between 2019 and 2022 →</p>
+				<svg id="Layer_2" class="section-content__chart section-content__chart--2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 988.6 610.81">
 					<defs>
 						<style>.cls-1--chart2{fill:#573271;}.cls-2--chart2{fill:#9880ad;}</style>
 					</defs>
 					<g id="Camada_1">
 					<path class="cls-2 cls-2--chart2 chart2 chart2--bar1" d="m30.51,320.61H5.68v190.4h24.82v-190.4Z"/>
-					<path class="cls-2 cls-2--chart2 hart2 chart2--bar2" d="m114.82,373.26h-24.82v137.74h24.82v-137.74Z"/>
+					<path class="cls-2 cls-2--chart2 chart2 chart2--bar2" d="m114.82,373.26h-24.82v137.74h24.82v-137.74Z"/>
 					<path class="cls-2 cls-2--chart2 chart2 chart2--bar3" d="m199.14,229.03h-24.82v281.98h24.82V229.03Z"/>
 					<path class="cls-2 cls-2--chart2 chart2 chart2--bar4" d="m283.47,245.99h-24.82v265.01h24.82V245.99Z"/>
 					<path class="cls-2 cls-2--chart2 chart2 chart2--bar5" d="m367.78,232.04h-24.82v278.96h24.82V232.04Z"/>
@@ -365,7 +381,7 @@
 					<path class="cls-1 cls-1--chart2 chart2 chart2--bar22" d="m817.05,291.5h-24.82v219.5h24.82v-219.5Z"/>
 					<path class="cls-1 cls-1--chart2 chart2 chart2--bar23" d="m901.37,247.2h-24.82v263.8h24.82V247.2Z"/>
 					<path class="cls-1 cls-1--chart2 chart2 chart2--bar24" d="m985.68,195.93h-24.82v315.07h24.82V195.93Z"/>
-					<path class="cls-1cls-1--chart2 " d="m20.05,543.96v9.56c0,1.48-.42,2.62-1.26,3.42-.83.8-1.95,1.2-3.36,1.2s-2.67-.42-3.56-1.26c-.89-.84-1.34-2.03-1.34-3.58h3.4c0,.59.12,1.03.36,1.34.24.29.59.44,1.04.44.41,0,.73-.13.96-.4.23-.27.34-.65.34-1.16v-9.56h3.42Zm12.5,11.56h-5.24l-.84,2.48h-3.58l5.08-14.04h3.96l5.08,14.04h-3.62l-.84-2.48Zm-.88-2.64l-1.74-5.14-1.72,5.14h3.46Zm20.45,5.12h-3.42l-5.72-8.66v8.66h-3.42v-14.04h3.42l5.72,8.7v-8.7h3.42v14.04Z"/>
+					<path class="cls-1 cls-1--chart2 " d="m20.05,543.96v9.56c0,1.48-.42,2.62-1.26,3.42-.83.8-1.95,1.2-3.36,1.2s-2.67-.42-3.56-1.26c-.89-.84-1.34-2.03-1.34-3.58h3.4c0,.59.12,1.03.36,1.34.24.29.59.44,1.04.44.41,0,.73-.13.96-.4.23-.27.34-.65.34-1.16v-9.56h3.42Zm12.5,11.56h-5.24l-.84,2.48h-3.58l5.08-14.04h3.96l5.08,14.04h-3.62l-.84-2.48Zm-.88-2.64l-1.74-5.14-1.72,5.14h3.46Zm20.45,5.12h-3.42l-5.72-8.66v8.66h-3.42v-14.04h3.42l5.72,8.7v-8.7h3.42v14.04Z"/>
 					<path class="cls-2 cls-2--chart2 chart2--number" d="m7.69,586.14c0,.51-.14.99-.41,1.43-.26.43-.65.78-1.18,1.06-.51.27-1.12.42-1.83.45v1.13h-.9v-1.15c-.99-.08-1.79-.38-2.39-.88-.61-.51-.93-1.21-.97-2.09h2.55c.06.56.33.92.81,1.08v-2.21c-.73-.19-1.31-.37-1.75-.55-.43-.18-.81-.46-1.13-.85-.33-.39-.49-.93-.49-1.61,0-.85.31-1.53.94-2.04.63-.51,1.45-.8,2.44-.87v-1.13h.9v1.13c.98.07,1.75.36,2.32.85s.89,1.18.95,2.06h-2.56c-.06-.5-.29-.83-.71-.98v2.17c.77.21,1.37.41,1.79.57.42.17.79.45,1.12.84.34.38.5.91.5,1.58Zm-5.15-4.3c0,.23.07.43.21.59.15.16.36.3.63.42v-1.95c-.26.05-.47.15-.62.31-.15.15-.22.36-.22.63Zm1.74,5.38c.28-.05.5-.16.66-.34.17-.18.25-.4.25-.66,0-.24-.08-.44-.24-.59-.15-.16-.37-.29-.67-.41v1.99Zm7.67-6.22v-2.23h3.88v10.22h-2.49v-7.99h-1.39Zm5.6.66c.04-1,.36-1.77.98-2.31.62-.54,1.45-.81,2.51-.81.7,0,1.3.12,1.79.36.5.24.88.57,1.13.99.26.42.39.89.39,1.41,0,.62-.15,1.12-.46,1.51-.31.38-.67.64-1.08.78v.06c.53.18.95.47,1.26.88.31.41.46.94.46,1.58,0,.58-.14,1.09-.41,1.54-.26.44-.65.78-1.16,1.04-.5.25-1.11.38-1.81.38-1.12,0-2.02-.27-2.69-.83-.66-.55-1.01-1.38-1.05-2.49h2.32c0,.41.13.74.35.98.22.23.55.35.98.35.36,0,.64-.1.84-.31.21-.22.31-.49.31-.84,0-.45-.14-.77-.43-.97-.28-.21-.73-.31-1.36-.31h-.45v-1.95h.45c.48,0,.86-.08,1.15-.24.3-.17.45-.46.45-.88,0-.34-.09-.6-.28-.78-.19-.19-.44-.28-.77-.28-.35,0-.62.11-.8.32-.17.21-.27.48-.29.8h-2.34Zm15.59-.8h-4.37v1.93c.19-.2.45-.37.78-.5.34-.13.7-.2,1.09-.2.7,0,1.28.16,1.74.48.47.32.81.73,1.02,1.23.21.5.32,1.05.32,1.64,0,1.09-.31,1.96-.92,2.6-.62.64-1.48.95-2.6.95-.75,0-1.4-.13-1.95-.38-.55-.26-.98-.62-1.27-1.08-.3-.46-.46-.98-.49-1.58h2.34c.06.29.19.53.41.73.21.19.51.28.88.28.44,0,.77-.14.98-.42.21-.28.32-.65.32-1.12s-.11-.81-.34-1.05c-.22-.24-.55-.36-.98-.36-.32,0-.58.08-.78.24-.21.15-.34.35-.41.6h-2.31v-6.09h6.54v2.1Zm4.72,5.92l-1.55,4.02h-1.53l.81-4.02h2.27Zm1.29-5.12c.04-1,.36-1.77.98-2.31.62-.54,1.45-.81,2.51-.81.7,0,1.3.12,1.79.36.5.24.88.57,1.13.99.26.42.39.89.39,1.41,0,.62-.15,1.12-.46,1.51-.31.38-.67.64-1.08.78v.06c.53.18.95.47,1.26.88.31.41.46.94.46,1.58,0,.58-.14,1.09-.41,1.54-.26.44-.65.78-1.16,1.04-.5.25-1.11.38-1.81.38-1.12,0-2.02-.27-2.69-.83-.66-.55-1.01-1.38-1.05-2.49h2.32c0,.41.13.74.35.98.22.23.55.35.98.35.36,0,.64-.1.84-.31.21-.22.31-.49.31-.84,0-.45-.14-.77-.43-.97-.28-.21-.73-.31-1.36-.31h-.45v-1.95h.45c.48,0,.86-.08,1.15-.24.3-.17.45-.46.45-.88,0-.34-.09-.6-.28-.78-.19-.19-.44-.28-.77-.28-.35,0-.62.11-.8.32-.17.21-.27.48-.29.8h-2.34Zm8.31,5.42c.32-.25.46-.37.43-.35.91-.76,1.63-1.38,2.16-1.86.53-.48.98-.99,1.34-1.53.36-.53.55-1.05.55-1.55,0-.38-.09-.68-.27-.9-.18-.21-.44-.32-.8-.32s-.63.13-.84.41c-.2.26-.29.63-.29,1.12h-2.31c.02-.79.19-1.46.5-1.99.33-.53.75-.92,1.27-1.18.53-.25,1.12-.38,1.76-.38,1.11,0,1.95.28,2.51.85.57.57.85,1.31.85,2.23,0,1-.34,1.93-1.02,2.79-.68.85-1.55,1.68-2.6,2.49h3.78v1.95h-7.03v-1.78Zm9.76-3.57c-.88-.47-1.32-1.2-1.32-2.2,0-.5.13-.96.39-1.37.26-.42.66-.75,1.19-.99.53-.25,1.19-.38,1.96-.38s1.42.13,1.95.38c.53.24.93.57,1.19.99.26.41.39.87.39,1.37s-.12.94-.36,1.32c-.23.37-.55.67-.95.88.5.24.89.58,1.16,1.01.27.42.41.91.41,1.48,0,.66-.17,1.24-.5,1.72-.34.48-.79.84-1.37,1.09-.57.25-1.2.38-1.9.38s-1.34-.13-1.92-.38c-.57-.25-1.02-.62-1.36-1.09-.34-.48-.5-1.06-.5-1.72,0-.58.14-1.08.41-1.5.27-.43.65-.76,1.15-.99Zm3.43-1.83c0-.38-.11-.68-.34-.88-.21-.22-.5-.32-.87-.32s-.66.11-.88.32c-.21.21-.32.51-.32.9s.11.65.34.87c.22.21.51.31.87.31s.64-.11.87-.32c.22-.22.34-.5.34-.87Zm-1.2,2.87c-.44,0-.79.12-1.06.36-.27.23-.41.56-.41.98,0,.39.13.71.39.97.27.25.63.38,1.08.38s.8-.13,1.05-.38c.26-.25.39-.57.39-.97s-.14-.74-.41-.98c-.26-.24-.61-.36-1.04-.36Z"/>
 					<path class="cls-1 cls-1--chart2 chart2--number" d="m12.51,606.14c0,.51-.14.99-.41,1.43-.26.43-.65.78-1.18,1.06-.51.27-1.12.42-1.83.45v1.13h-.9v-1.15c-.99-.08-1.79-.38-2.39-.88-.61-.51-.93-1.21-.97-2.09h2.55c.06.56.33.92.81,1.08v-2.21c-.73-.19-1.31-.37-1.75-.55-.43-.18-.81-.46-1.13-.85-.33-.39-.49-.93-.49-1.61,0-.85.31-1.53.94-2.04.63-.51,1.45-.8,2.44-.87v-1.13h.9v1.13c.98.07,1.75.36,2.32.85.57.49.89,1.18.95,2.06h-2.56c-.06-.5-.29-.83-.71-.98v2.17c.77.21,1.37.41,1.79.57.42.17.79.45,1.12.84.34.38.5.91.5,1.58Zm-5.15-4.3c0,.23.07.43.21.59.15.16.36.3.63.42v-1.95c-.26.05-.47.15-.62.31-.15.15-.22.36-.22.63Zm1.74,5.38c.28-.05.5-.16.66-.34.17-.18.25-.4.25-.66,0-.24-.08-.44-.24-.59-.15-.16-.37-.29-.67-.41v1.99Zm14.45-6.65l-3.51,8.43h-2.45l3.56-8.16h-4.35v-2.04h6.76v1.78Zm6.02.97c-.07-.35-.21-.6-.39-.77-.19-.18-.45-.27-.8-.27-.53,0-.91.23-1.15.7-.23.46-.35,1.18-.36,2.18.21-.33.5-.58.88-.77.39-.19.82-.28,1.29-.28.91,0,1.65.29,2.2.87.56.58.84,1.39.84,2.42,0,.68-.14,1.28-.42,1.79-.27.51-.67.91-1.2,1.2-.52.29-1.14.43-1.86.43-1.44,0-2.44-.45-3-1.34-.56-.9-.84-2.2-.84-3.89,0-1.77.29-3.09.88-3.95.6-.87,1.55-1.3,2.86-1.3.7,0,1.29.14,1.76.42.49.27.85.63,1.09,1.08.25.45.4.94.45,1.47h-2.23Zm-1.11,2.69c-.4,0-.74.12-1.01.36-.26.23-.39.57-.39,1.01s.12.8.36,1.05c.25.25.61.38,1.06.38.41,0,.73-.12.97-.36.24-.25.36-.59.36-1.02s-.12-.78-.35-1.04c-.23-.25-.57-.38-1.01-.38Zm7.78,2.56l-1.55,4.02h-1.53l.81-4.02h2.27Zm3.78-.78c.14.74.57,1.11,1.29,1.11.49,0,.84-.22,1.05-.66.21-.44.31-1.15.31-2.14-.21.29-.49.51-.84.67-.35.16-.75.24-1.19.24-.6,0-1.13-.12-1.6-.36-.47-.25-.84-.62-1.11-1.11-.26-.49-.39-1.09-.39-1.79s.14-1.29.42-1.81c.29-.51.7-.91,1.22-1.19.53-.28,1.16-.42,1.88-.42,1.38,0,2.35.43,2.9,1.29.55.86.83,2.12.83,3.79,0,1.21-.11,2.22-.34,3.01-.21.78-.58,1.38-1.11,1.79-.51.41-1.22.62-2.11.62-.71,0-1.32-.14-1.82-.42-.49-.28-.88-.65-1.15-1.11-.26-.46-.41-.96-.45-1.51h2.21Zm1.16-2.67c.39,0,.7-.12.94-.35.23-.24.35-.57.35-.98,0-.45-.12-.79-.36-1.04-.24-.24-.57-.36-.98-.36s-.74.13-.98.38c-.23.24-.35.58-.35,1.01,0,.4.12.73.35.98.24.24.59.36,1.04.36Zm4.96-1.67c.04-1,.36-1.77.98-2.31s1.45-.81,2.51-.81c.7,0,1.3.12,1.79.36.5.24.88.57,1.13.99.26.42.39.89.39,1.41,0,.62-.15,1.12-.46,1.51-.31.38-.67.64-1.08.78v.06c.53.18.95.47,1.26.88.31.41.46.94.46,1.58,0,.58-.14,1.09-.41,1.54-.26.44-.65.78-1.16,1.04-.5.25-1.11.38-1.81.38-1.12,0-2.02-.27-2.69-.83-.66-.55-1.01-1.38-1.05-2.49h2.32c0,.41.13.74.35.98.22.23.55.35.98.35.36,0,.64-.1.84-.31.21-.22.31-.49.31-.84,0-.45-.14-.77-.43-.97-.28-.21-.73-.31-1.36-.31h-.45v-1.95h.45c.48,0,.86-.08,1.15-.24.3-.17.45-.46.45-.88,0-.34-.09-.6-.28-.78-.19-.19-.44-.28-.77-.28-.35,0-.62.11-.8.32-.17.21-.27.48-.29.8h-2.34Zm8.14-.66v-2.23h3.88v10.22h-2.49v-7.99h-1.39Z"/>
 					<path class="cls-1 cls-1--chart2" d="m107.59,543.96v2.74h-5.72v2.96h4.28v2.66h-4.28v5.68h-3.42v-14.04h9.14Zm6.22,2.74v2.84h4.58v2.64h-4.58v3.08h5.18v2.74h-8.6v-14.04h8.6v2.74h-5.18Zm16.9,4.1c.81.17,1.47.58,1.96,1.22.49.63.74,1.35.74,2.16,0,1.17-.41,2.11-1.24,2.8-.81.68-1.95,1.02-3.42,1.02h-6.54v-14.04h6.32c1.43,0,2.54.33,3.34.98.81.65,1.22,1.54,1.22,2.66,0,.83-.22,1.51-.66,2.06-.43.55-1,.93-1.72,1.14Zm-5.08-1.16h2.24c.56,0,.99-.12,1.28-.36.31-.25.46-.62.46-1.1s-.15-.85-.46-1.1c-.29-.25-.72-.38-1.28-.38h-2.24v2.94Zm2.52,5.6c.57,0,1.01-.13,1.32-.38.32-.27.48-.65.48-1.14s-.17-.88-.5-1.16c-.32-.28-.77-.42-1.34-.42h-2.48v3.1h2.52Z"/>
@@ -408,11 +424,11 @@
 					</g>
 				</svg>
 			</div>
-			<div class="section-content__slide color-context--grape finances__7 slide slide-gsap">
+			<div class="section-content__slide color-context--grape finances__7 slide">
 				<p class="section-content__slide-subhead parallax" data-speed="0.8">2022 Financials</p>
 				<p class="section-content__slide-head section-content__slide-head--small parallax" data-speed="0.8">Revenue Sources</p>
 			</div>
-			<div class="section-content__slide color-context--grape35 finances__8 slide slide-gsap">
+			<div class="section-content__slide color-context--grape35 finances__8 slide slide-last">
 				<div class="section-content__slide-stats finances__8--1">
 					<h4 class="section-content__slide-stats-number section-content__slide-stats-number--grape35">17%</h4>
 					<p class="section-content__slide-stats-caption section-content__slide-stats-caption--poppins">ANNUAL CONTRIBUTIONS</p>
@@ -434,7 +450,7 @@
 
 		</div>
 
-		<div class="capital-improvements section" id="capital-improvements">
+		<div class="capital-improvements section section-gsap" id="capital-improvements">
 
 			<div class="section-hero color-context--rose slide slide-gsap" id="partners-menu-slide">
 				<div class="section-hero__running-head">
@@ -442,7 +458,7 @@
 					<p>CAMPUS ENHANCEMENTS</p>
 				</div>
 				<div class="section-hero__image">
-					<img src="images\04 - Section 4\012 Parade22-Jamie Pham.jpeg">
+					<img src="images\04 - Section 4\012 Parade22-Jamie Pham.jpg">
 				</div>
 				<div class="section-hero__title">
 					<h2 class="annotation__17">2022 Capital Improvements</h2>
@@ -451,99 +467,57 @@
 			<div class="section-content__slide color-context--rose capital-improvements__1 slide">
 				<p class="section-content__slide-subsection-head section-content__slide-subsection-head--large">Muddy Boot Farm</p>
 				<p class="section-content__slide-text section-content__slide-text--white parallax" data-speed="0.8">Muddy Boot Farm invites children to become farmers, merchants, cooks, or customers in the wonkiest, goofiest farmstand in the land. Kids “dig in” to planting, growing, and the farm-to-table food movement surround by dramatically oversized vegetables, giant, boot-wearing chickens, and a disco complete with a barnyard band.</p>
-				<p class="section-content__slide-caption section-content__slide-caption--capital-improvements parallax" data-speed="0.8">Funding from General Operating Support grants</p>
+				<p class="section-content__slide-caption section-content__slide-caption--capital-improvements parallax" data-speed="0.2">Funding from General Operating Support grants</p>
 			</div>
-			<div class="section-content__image capital-improvements__2 slide slide-gsap">
+			<div class="section-content__image section-content__image--scroller capital-improvements__2 slide slide-gsap">
 				<div class="capital-improvements__2--container">
-					<img class="capital-improvements__2--1" src="images\04 - Section 4\scroller-mobile-1.png">
+					<img class="capital-improvements__2--1 scroller-1" src="images\04 - Section 4\scroller-mobile-1.png">
 				</div>
 			</div>
 			<div class="section-content__image capital-improvements__2-1 slide slide-gsap">
-				<img class="capital-improvements__2--2" src="images\04 - Section 4\Kidspace22-0009973rt.jpeg">
-				<img class="capital-improvements__2--3" src="images\04 - Section 4\165 MuddyBootFarm-Jamie Pham.jpeg">
+				<img class="capital-improvements__2--2" src="images\04 - Section 4\Kidspace22-0009973rt.jpg">
+				<img class="capital-improvements__2--3" src="images\04 - Section 4\165 MuddyBootFarm-Jamie Pham.jpg">
 			</div>
 			<div class="section-content__image capital-improvements__2-2 slide slide-gsap">
-				<img class="capital-improvements__2--4" src="images\04 - Section 4\202 MuddyBootFarm-Jamie Pham.jpeg">
+				<img class="capital-improvements__2--4" src="images\04 - Section 4\202 MuddyBootFarm-Jamie Pham.jpg">
 			</div>
-			<!-- <div class="section-content__image--scroller">
-				<div class="section-content__image--scroller-container">
-					<div class="section-content__image capital-improvements__2 slide slide-gsap">
-						<img class="capital-improvements__2--1" src="images\04 - Section 4\184 MuddyBootFarm-Jamie Pham.jpeg">
-					</div>
-					<div class="section-content__image capital-improvements__2-1 slide slide-gsap">
-						<img class="capital-improvements__2--2" src="images\04 - Section 4\Kidspace22-0009973rt.jpeg">
-						<img class="capital-improvements__2--3" src="images\04 - Section 4\165 MuddyBootFarm-Jamie Pham.jpeg">
-					</div>
-					<div class="section-content__image capital-improvements__2-2 slide slide-gsap">
-						<img class="capital-improvements__2--4" src="images\04 - Section 4\202 MuddyBootFarm-Jamie Pham.jpeg">
-					</div>
-				</div>
-			</div> -->
 			<div class="section-content__slide color-context--rose capital-improvements__3 slide" id="financial-disclosures-menu-slide">
 				<p class="section-content__slide-subsection-head section-content__slide-subsection-head--large">Ramps and Rollers</p>
 				<p class="section-content__slide-text section-content__slide-text--white parallax" data-speed="0.8">In Ramps and Rollers kids run the town, engineering ridiculous, rockin’ and rollin’ roadways in a monster-filled, city-themed environment. Guests design and build STEAM-based creations together using ramps, blocks, balls, and monster pieces.</p>
-				<p class="section-content__slide-caption section-content__slide-caption--capital-improvements parallax" data-speed="0.8">Funding from General Operating Support grants</p>
+				<p class="section-content__slide-caption section-content__slide-caption--capital-improvements parallax" data-speed="0.2">Funding from General Operating Support grants</p>
 			</div>
-			<div class="section-content__image section-content__image--scroller capital-improvements__4 slide slide-gsap">
-				<div class="capital-improvements__2--container">
-					<img class="capital-improvements__4--1" src="images\04 - Section 4\scroller-mobile-2.png">
+			<div class="section-content__image section-content__image--scroller capital-improvements__4 slide">
+				<div class="capital-improvements__4--container">
+					<img class="capital-improvements__4--1 scroller-2" src="images\04 - Section 4\scroller-mobile-2.png">
 				</div>
 			</div>
-			<div class="section-content__image section-content__image--scroller capital-improvements__4-1 slide slide-gsap">
-				<img class="capital-improvements__4--2" src="images\04 - Section 4\Ramps and Rollers-2 Oct2022.jpeg">
-				<img class="capital-improvements__4--3" src="images\04 - Section 4\Kidspace22-0016493rt_retouch.jpeg">
+			<div class="section-content__image section-content__image--scroller capital-improvements__4-1 slide">
+				<img class="capital-improvements__4--2" src="images\04 - Section 4\Ramps and Rollers-2 Oct2022.jpg">
+				<img class="capital-improvements__4--3" src="images\04 - Section 4\Kidspace22-0016493rt_retouch.jpg">
 			</div>
-			<div class="section-content__image section-content__image--scroller capital-improvements__4-2 slide slide-gsap">
-				<img class="capital-improvements__4--4" src="images\04 - Section 4\Ramps and Rollers-1 Oct2022.jpeg">
+			<div class="section-content__image section-content__image--scroller capital-improvements__4-2 slide">
+				<img class="capital-improvements__4--4" src="images\04 - Section 4\Ramps and Rollers-1 Oct2022.jpg">
 			</div>
-			<!-- <div class="section-content__image--scroller">
-				<div class="section-content__image--scroller-container">
-					<div class="section-content__image section-content__image--scroller capital-improvements__4 slide slide-gsap">
-						<img class="capital-improvements__4--1" src="images\04 - Section 4\Ramps and Rollers-4 Oct2022.jpeg">
-					</div>
-					<div class="section-content__image section-content__image--scroller capital-improvements__4-1 slide slide-gsap">
-						<img class="capital-improvements__4--2" src="images\04 - Section 4\Ramps and Rollers-2 Oct2022.jpeg">
-						<img class="capital-improvements__4--3" src="images\04 - Section 4\Kidspace22-0016493rt_retouch.jpeg">
-					</div>
-					<div class="section-content__image section-content__image--scroller capital-improvements__4-2 slide slide-gsap">
-						<img class="capital-improvements__4--4" src="images\04 - Section 4\Ramps and Rollers-1 Oct2022.jpeg">
-					</div>
-				</div>
-			</div> -->
 			<div class="section-content__slide color-context--rose capital-improvements__5 slide">
 				<p class="section-content__slide-subsection-head section-content__slide-subsection-head--large">Winding Willow Lake</p>
 				<p class="section-content__slide-text section-content__slide-text--white parallax" data-speed="0.8">In 2022, Winding Willow Lake transformed a quiet corner of campus into an imaginative sandy “lake” filled with blue sand “water” and the cutest rowboat around, the Pollywog. Focusing on imaginary play, children are centered in their own storytelling about fishing, sailing, or whale watching, while adults rest on the cozy “dock” built just for them.</p>
 			</div>
-			<div class="section-content__image section-content__image--scroller capital-improvements__6 slide slide-gsap">
-				<div class="capital-improvements__2--container">
-					<img class="capital-improvements__6--1" src="images\04 - Section 4\scroller-mobile-3.png">
+			<div class="section-content__image section-content__image--scroller capital-improvements__6 slide slide-last color-context--rose">
+				<div class="capital-improvements__6--container">
+					<img class="capital-improvements__6--1 scroller-3" src="images\04 - Section 4\scroller-mobile-3.png">
 				</div>
 			</div>
-			<div class="section-content__image section-content__image--scroller capital-improvements__6-1 slide slide-gsap">
-				<img class="capital-improvements__6--2" src="images\04 - Section 4\008 Boat JEP_4085.jpeg">
+			<div class="section-content__image section-content__image--scroller capital-improvements__6-1 slide">
+				<img class="capital-improvements__6--2" src="images\04 - Section 4\008 Boat JEP_4085.jpg">
 				<img class="capital-improvements__6--3" src="images\04 - Section 4\Web 202 Boat Kidspace22-Jamie Pham.jpeg">
 			</div>
-			<div class="section-content__image section-content__image--scroller capital-improvements__6-2 slide slide-gsap">
-				<img class="capital-improvements__6--4" src="images\04 - Section 4\007 Boat JEP_4000.jpeg">
+			<div class="section-content__image section-content__image--scroller capital-improvements__6-2 slide">
+				<img class="capital-improvements__6--4" src="images\04 - Section 4\007 Boat JEP_4000.jpg">
 			</div>
-			<!-- <div class="section-content__image--scroller">
-				<div class="section-content__image--scroller-container">
-					<div class="section-content__image section-content__image--scroller capital-improvements__6 slide slide-gsap">
-						<img class="capital-improvements__6--1" src="images\04 - Section 4\198 Boat Kidspace22-Jamie Pham_crop.jpeg">
-					</div>
-					<div class="section-content__image section-content__image--scroller capital-improvements__6-1 slide slide-gsap">
-						<img class="capital-improvements__6--2" src="images\04 - Section 4\008 Boat JEP_4085.jpeg">
-						<img class="capital-improvements__6--3" src="images\04 - Section 4\Web 202 Boat Kidspace22-Jamie Pham.jpeg">
-					</div>
-					<div class="section-content__image section-content__image--scroller capital-improvements__6-2 slide slide-gsap">
-						<img class="capital-improvements__6--4" src="images\04 - Section 4\007 Boat JEP_4000.jpeg">
-					</div>
-				</div>
-			</div> -->
 
 		</div>
 
-		<div class="our-partners section" id="our-partners">
+		<div class="our-partners section section-gsap" id="our-partners">
 
 			<div class="section-hero color-context--watermelon slide slide-gsap">
 				<div class="section-hero__running-head">
@@ -551,7 +525,7 @@
 					<p>OUR PARTNERS</p>
 				</div>
 				<div class="section-hero__image">
-					<img src="images\05 - Section 5\IMG_4503.jpeg">
+					<img src="images\05 - Section 5\IMG_4503.jpg">
 				</div>
 				<div class="section-hero__title">
 					<h2 class="annotation__18">Making Friends</h2>
@@ -562,41 +536,41 @@
 				<p class="section-content__slide-text section-content__slide-text--white parallax" data-speed="0.8">Kidspace partnered with LA-based, community arts nonprofit Transformative Arts, curator jill moniz, master quilter Lavialle Campbell, and fabric artist Soyoung Shin, to explore the storytelling power and history of Black quilt making.</p>
 			</div>
 			<div class="section-content__image our-partners__2 slide slide-gsap">
-				<img src="images\05 - Section 5\IMG_4494.png">
+				<img src="images\05 - Section 5\IMG_4494.jpg">
 			</div>
 			<div class="section-content__slide color-context--watermelon35 our-partners__3 slide slide-gsap">
 				<img class="our-partners__3--1" src="images\05 - Section 5\IMG_4484-masked.png">
-				<p class="section-content__slide-text section-content__slide-text--watermelon parallax" data-speed="0.8">Over weekends in February and March, Kidspace invited our visitors to work side by side with Campbell on a series of community quilts.</p>
+				<p class="section-content__slide-text section-content__slide-text--watermelon our-partners__3--2" data-speed="0.2">Over weekends in February and March, Kidspace invited our visitors to work side by side with Campbell on a series of community quilts.</p>
 			</div>
 			<div class="section-content__slide color-context--watermelon35 our-partners__5 slide slide-gsap">
 				<img class="our-partners__5--1" src="images\05 - Section 5\IMG_4492-masked.png">
 				<img class="our-partners__5--2" src="images\05 - Section 5\IMG_4499-masked.png">
 			</div>
-			<div class="section-content__slide color-context--watermelon our-partners__6 slide slide-gsap">
+			<div class="section-content__slide color-context--watermelon our-partners__6 slide">
 				<p class="section-content__slide-text section-content__slide-text--white parallax" data-speed="0.8">Over 100 families crafted their personal stories into individual fabric patches which Shin then sewed together into quilts which became shared remembrances of the lives, feelings, and hopes of the Kidspace community in 2022.</p>
 			</div>
 			<div class="section-content__image our-partners__7 slide slide-gsap">
-				<img src="images\05 - Section 5\IMG_4489.jpeg">
+				<img src="images\05 - Section 5\IMG_4489.jpg">
 			</div>
-			<div class="section-content__slide our-partners__menu color-context--watermelon35 our-partners__8 slide slide-gsap">
+			<div class="section-content__slide our-partners__menu color-context--watermelon35 our-partners__8 slide slide-last">
 				<div class="our-partners__menu-center our-partners__8--1">
 					<img src="images\Logos\K-only-watermelon.png">
 					<p>Click on groups to meet our partners</p>
 				</div>
 				<div class="our-partners__menu-government-partners our-partners__8--2">
-					<button class="our-partners__button annotation__19">Government Partners</button>
+					<button class="our-partners__button annotation__19">Government<br>Partners</button>
 					<ul>
 						<li>
-							<button class="our-partners__menu-government-partners--menu-1"><a href="#">Department of Children and Family Services</a></button>
+							<button class="our-partners__menu-government-partners--menu-1"><a href="https://dcfs.lacounty.gov/" target="_blank">Department of Children and Family Services</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-government-partners--menu-2"><a href="#">Head Start</a></button>
+							<button class="our-partners__menu-government-partners--menu-2"><a href="https://www.pacificclinics.org/service/educational-programs/head-start/" target="_blank">Head Start</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-government-partners--menu-3"><a href="#">Office of the Young Child</a></button>
+							<button class="our-partners__menu-government-partners--menu-3"><a href="https://www.cityofpasadena.net/office-of-the-young-child" target="_blank">Office of the Young Child</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-government-partners--menu-4"><a href="#">City of Pasadena</a></button>
+							<button class="our-partners__menu-government-partners--menu-4"><a href="https://www.cityofpasadena.net" target="_blank">City of Pasadena</a></button>
 						</li>
 					</ul>
 				</div>
@@ -604,78 +578,78 @@
 					<button class="our-partners__button annotation__20">Educators</button>
 					<ul>
 						<li>
-							<button class="our-partners__menu-educators--menu-1"><a href="#">Pasadena Public Libraries</a></button>
+							<button class="our-partners__menu-educators--menu-1"><a href="https://www.cityofpasadena.net/library/" target="_blank">Pasadena Public Libraries</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-educators--menu-2"><a href="#">Resources for Infant Educarers</a></button>
+							<button class="our-partners__menu-educators--menu-2"><a href="https://rie.org/" target="_blank">Resources for Infant Educarers</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-educators--menu-3"><a href="#">Hillside School</a></button>
+							<button class="our-partners__menu-educators--menu-3"><a href="https://hillsideforsuccess.org" target="_blank">Hillside School</a></button>
 						</li>
 					</ul>
 				</div>
 				<div class="our-partners__menu-foster-families our-partners__8--4">
-					<button class="our-partners__button annotation__21">Foster Families</button>
+					<button class="our-partners__button annotation__21">Foster<br>Families</button>
 					<ul>
 						<li>
-							<button class="our-partners__menu-foster-families--menu-1"><a href="#">Anthony & Jeanne Pritzger Family Foundation</a></button>
+							<button class="our-partners__menu-foster-families--menu-1"><a href="https://www.ajpff.org/" target="_blank">Anthony & Jeanne Pritzger Family Foundation</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-foster-families--menu-2"><a href="#">Foster Love</a></button>
+							<button class="our-partners__menu-foster-families--menu-2"><a href="https://www.fosterlove.com/events/kidspace-birthday-palooza/" target="_blank">Foster Love</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-foster-families--menu-3"><a href="#">Make Good</a></button>
+							<button class="our-partners__menu-foster-families--menu-3"><a href="https://www.makegoodinc.org/" target="_blank">Make Good</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-foster-families--menu-4"><a href="#">Hope in a Suitcase</a></button>
+							<button class="our-partners__menu-foster-families--menu-4"><a href="http://www.hopeinasuitcase.org/" target="_blank">Hope in a Suitcase</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-foster-families--menu-5"><a href="#">Young and Healthy</a></button>
+							<button class="our-partners__menu-foster-families--menu-5"><a href="https://yhpasadena.org" target="_blank">Young and Healthy</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-foster-families--menu-6"><a href="#">FosterMore</a></button>
+							<button class="our-partners__menu-foster-families--menu-6"><a href="https://fostermore.org/" target="_blank">FosterMore</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-foster-families--menu-7"><a href="#">CASA LA</a></button>
+							<button class="our-partners__menu-foster-families--menu-7"><a href="https://casala.org/" target="_blank">CASA LA</a></button>
 						</li>
 					</ul>
 				</div>
 				<div class="our-partners__menu-arts-community our-partners__8--5">
-					<button class="our-partners__button annotation__22">Arts and Community</button>
+					<button class="our-partners__button annotation__22">Arts and<br>Community</button>
 					<ul>
 						<li>
-							<button class="our-partners__menu-arts-community--menu-1"><a href="#">Tierra del Sol</a></button>
+							<button class="our-partners__menu-arts-community--menu-1"><a href="https://tierra-del-sol-gallery.myshopify.com/collections/kidspace" target="_blank">Tierra del Sol</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-arts-community--menu-2"><a href="#">Transformative Arts</a></button>
+							<button class="our-partners__menu-arts-community--menu-2"><a href="https://transformativenow.org/now" target="_blank">Transformative Arts</a></button>
 						</li>
 					</ul>
 				</div>
 				<div class="our-partners__menu-wildlife our-partners__8--6">
-					<button class="our-partners__button annotation__23">Wildlife and Natural World</button>
+					<button class="our-partners__button annotation__23">Wildlife and<br>Natural World</button>
 					<ul>
 						<li>
-							<button class="our-partners__menu-wildlife--menu-1"><a href="#">Pasadena Humane Society</a></button>
+							<button class="our-partners__menu-wildlife--menu-1"><a href="https://pasadenahumane.org" target="_blank">Pasadena Humane Society</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-wildlife--menu-2"><a href="#">Arroyos and Foothills Conservancy</a></button>
+							<button class="our-partners__menu-wildlife--menu-2"><a href="https://www.livinginawildlifecorridor.org/" target="_blank">Arroyos and Foothills Conservancy</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-wildlife--menu-3"><a href="#">Pasadena Audubon Society</a></button>
+							<button class="our-partners__menu-wildlife--menu-3"><a href="https://www.pasadenaaudubon.org/" target="_blank">Pasadena Audubon Society</a></button>
 						</li>
 					</ul>
 				</div>
 				<div class="our-partners__menu-health our-partners__8--7">
-					<button class="our-partners__button annotation__24">Health and Wellbeing</button>
+					<button class="our-partners__button annotation__24">Health and<br>Wellbeing</button>
 					<ul>
 						<li>
-							<button class="our-partners__menu-health--menu-1"><a href="#">Inland Valley Down Syndrome Association</a></button>
+							<button class="our-partners__menu-health--menu-1"><a href="https://www.ivdsa.org" target="_blank">Inland Valley Down Syndrome Association</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-health--menu-2"><a href="#">Ronald McDonald House</a></button>
+							<button class="our-partners__menu-health--menu-2"><a href="https://rmhcsc.org/pasadena" target="_blank">Ronald McDonald House</a></button>
 						</li>
 						<li>
-							<button class="our-partners__menu-health--menu-3"><a href="#">Pediatric Epilepsy Surgery Alliance</a></button>
+							<button class="our-partners__menu-health--menu-3"><a href="https://epilepsysurgeryalliance.org/" target="_blank">Pediatric Epilepsy Surgery Alliance</a></button>
 						</li>
 					</ul>
 				</div>
@@ -683,30 +657,30 @@
 
 		</div>
 		
-		<div class="financial-disclosures section" id="financial-disclosures">
+		<div class="financial-disclosures section section-gsap" id="financial-disclosures">
 
-			<div class="section-hero color-context--tangerine slide slide-gsap">
+			<div class="section-hero color-context--tangerine slide slide-gsap slide-last">
 				<div class="section-hero__running-head">
 					<h3>6</h3>
 					<p>FINANCIAL DISCLOSURES</p>
 				</div>
 				<div class="section-hero__image">
-					<img src="images\06 - Section 6\IMG_7338.jpeg">
+					<img src="images\06 - Section 6\IMG_7338.jpg">
 				</div>
 				<div class="section-hero__title section-hero__title--financial-disclosures">
-					<button class="section-hero__button section-hero__button--financial-disclosures section-hero__button--left">2022 Audited Financial Statement</button>
-					<button class="section-hero__button section-hero__button--financial-disclosures section-hero__button--right">2022 Public Disclosure 990</button>
+					<a href="https://kidspacemuseum.org/wp-content/uploads/2021/08/Audited-Financial-Stmts_2020.pdf" target="_blank"><button class="section-hero__button section-hero__button--financial-disclosures section-hero__button--left">2022 Audited Financial Statement</button></a>
+					<a href="https://kidspacemuseum.org/wp-content/uploads/2021/10/KAPM-2020-Form-990-Public-Disclosure-Copy.pdf" target="_blank"><button class="section-hero__button section-hero__button--financial-disclosures section-hero__button--right">2022 Public Disclosure 990</button></a>
 				</div>
 			</div>
 
-		</div>
+		</div> 
 
-		<div class="conclusion">
+		<div class="conclusion section-gsap">
 
 			<div class="section-content__image slide slide-gsap conclusion__1">
-				<img src="images\07 - End coda\507 Campout VisitorCenter-Jamie Pham.jpeg">
+				<img src="images\07 - End coda\507 Campout VisitorCenter-Jamie Pham.jpg">
 			</div>
-			<div class="section-content__slide slide slide-gsap color-context--green conclusion__2">
+			<div class="section-content__slide slide-gsap slide color-context--green conclusion__2">
 				<p class="section-content__slide-subsection-head section-content__slide-subsection-head--large">We believe that every child deserves the <span>opportunity</span> to create a future of their own choosing.</p>
 			</div>
 			<div class="section-content__slide slide slide-gsap color-context--green35 conclusion__3">
@@ -715,11 +689,31 @@
 				<p class="section-content__slide-text section-content__slide-text--conclusion conclusion-anim-text">Education</p>
 			</div>
 			<div class="section-content__image slide slide-gsap conclusion__4">
-				<img src="images\07 - End coda\189 WinterFrolic22-Jamie Pham.jpeg">
+				<img src="images\07 - End coda\189 WinterFrolic22-Jamie Pham.jpg">
 			</div>
 			<div class="section-content__slide slide slide-gsap color-context--green35 conclusion__5">
 				<img class="section-content__image--conclusion" src="images\conclusion-logo.svg">
 			</div>
+						<!-- <div class="section-content__slide slide slide-gsap color-context--green35 conclusion__3-1 conclusion__desktop">
+				<p class="section-content__slide-text section-content__slide-text--conclusion">Opportunity</p>
+				<p class="section-content__slide-text section-content__slide-text--conclusion">=</p>
+				<p class="section-content__slide-text section-content__slide-text--conclusion">Inspiration</p>
+			</div>
+			<div class="section-content__slide slide slide-gsap color-context--green35 conclusion__3-2 conclusion__desktop">
+				<p class="section-content__slide-text section-content__slide-text--conclusion">Opportunity</p>
+				<p class="section-content__slide-text section-content__slide-text--conclusion">=</p>
+				<p class="section-content__slide-text section-content__slide-text--conclusion">Mentorship</p>
+			</div>
+			<div class="section-content__slide slide slide-gsap color-context--green35 conclusion__3-3 conclusion__desktop">
+				<p class="section-content__slide-text section-content__slide-text--conclusion">Opportunity</p>
+				<p class="section-content__slide-text section-content__slide-text--conclusion">=</p>
+				<p class="section-content__slide-text section-content__slide-text--conclusion">Nature</p>
+			</div>
+			<div class="section-content__slide slide slide-gsap color-context--green35 conclusion__3-4 conclusion__desktop">
+				<p class="section-content__slide-text section-content__slide-text--conclusion">Opportunity</p>
+				<p class="section-content__slide-text section-content__slide-text--conclusion">=</p>
+				<p class="section-content__slide-text section-content__slide-text--conclusion">Play</p>
+			</div> -->
 
 		</div>
 
